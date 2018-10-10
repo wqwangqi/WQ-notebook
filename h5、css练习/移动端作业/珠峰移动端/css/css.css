@@ -1,0 +1,168 @@
+html{
+    font-size: 50px;
+}
+header{
+    background-color: #2a2a2a;
+    width: 100%;
+    height: 1.12rem;
+}
+header .logo{
+    width: 2.1rem;
+    height: .62rem;
+    float: left;
+    margin: .25rem 0 0 .25rem;
+
+}
+header .logo a img{
+width: 100%;
+}
+header .nav{
+float: right;
+    margin: .41rem .22rem 0 0;
+}
+header .nav span{
+    background-color: white;
+    width: .37rem;
+    height: .07rem;
+    display: block;
+    margin-bottom: .06rem;
+    border-radius: .2rem;
+    -webkit-border-radius: .2rem;
+
+}
+
+
+section{
+    position: relative;
+}
+section .pic1{
+width: 100%;
+}
+section .pic1 ul li{
+    display: none;
+
+}
+section .pic1 ul .block{
+    display: block;
+}
+section .pic1 ul li a img{
+    width: 100%;
+}
+section .dot{
+
+}
+section .dot ul{
+    position: absolute;
+    left: 0;
+    bottom: .15rem;
+    right: 0;
+    margin: auto;
+    width: .84rem;
+    height: .16rem;
+
+
+
+}
+section .dot ul li{
+    background-color: white;
+    width: .16rem;
+    height: .16rem;
+    border-radius: 50%;
+    float: left;
+    margin-right: .06rem;
+
+
+
+
+
+
+}
+section .dot ul .nomargin{
+    margin-right: 0;
+}
+
+
+.all{
+    background-color: #f8f8f8;
+    padding: 0 .19rem 0 .19rem;
+
+}
+section .allcourse{
+
+
+}
+section .allcourse h3{
+    font-size: .26rem;
+    color: #4c4b4b;
+    line-height: .99rem;
+
+
+}
+section .allcourse h3 i{
+   background: url("../img/icon.png");
+    width: .29rem;
+    height: .35rem;
+    display: block;
+    background-position: 0 -1.17rem;
+    background-size: 1.97rem 1.51rem;
+    float: left;
+    margin: .34rem .15rem 0 0;
+}
+section .course{
+    width: 100%;
+    margin-bottom: .37rem;
+    -webkit-border-radius: .1rem .1rem 0 0;
+    border-radius: .1rem .1rem 0 0;
+    box-shadow:1px 1px 1px grey,-1px 1px 1px grey;
+}
+section .course img{
+    width: 100%;
+    -webkit-border-radius: .1rem .1rem 0 0;
+    border-radius: .1rem .1rem 0 0;
+}
+section .course .wz{
+    background-color: white;
+    -webit-border-radius: 0 0 .1rem .1rem;
+    border-radius: 0 0 .1rem .1rem;
+    box-shadow:1px 1px 1px grey,-1px 1px 1px grey;
+}
+section .course h4{
+    font-size: .28rem;
+    color: #777777;
+    line-height: .52rem;
+    text-align: center;
+}
+section .course p{
+    font-size: .28rem;
+    color: #ed3a3a;
+    line-height: .52rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 375px){
+    html{
+        font-size: 58.59375px;
+    }
+}
+
+@media screen and (min-width: 414px){
+    html{
+        font-size: 64.6875px;
+    }
+}
+
+@media screen and (min-width: 640px){
+    html{
+        font-size: 100px;
+    }
+}
+
+
+

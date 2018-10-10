@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="list">
+        <li>aaaa</li>
+        <li>cccc</li>
+        <li>111</li>
+        aaaaa
+        <li id="li2">222</li>
+        <!-- bbbbbb-->
+        <li>333</li>
+    </ul>
+<div id="div1">
+    <span>a</span>
+    <span>b</span>
+    <span>c</span>
+</div>
+</body>
+</html>
+
+<script>
+//    1.获取所有的子元素节点
+    /**
+     * @param ele  指定的元素
+     * @return ary  ary里放着所有的子元素节点
+     */
+    /*function getChildren(ele){
+        var ary = [];
+        //1.获取所有的子节点
+        var childs = ele.childNodes;  //集合
+        //2.从所有子节点中找出元素节点存入数组中
+        for(var i = 0;i<childs.length;i++){
+            var cur = childs[i]; //每一个节点
+            if(cur.nodeType===1){
+                ary[ary.length]=cur;
+            }
+        }
+        return ary;
+    }
+    var oUl = document.getElementById("list");
+    console.log(getChildren(oUl));
+    var oDiv = document.getElementById("div1");
+    console.log(getChildren(oDiv));*/
+
+    //获取某个元素的相邻的哥哥元素节点
+    /**
+     *
+     * @param ele 指定的元素
+     * @return 相邻的哥哥元素节点
+     */
+    //2.找到哥哥节点并判断是否是哥哥元素节点 （次数不确定 while）
+    function getPrev(ele){
+        var pre = ele.previousSibling; //若不存在则null
+        while(pre){
+            if(pre.nodeType===1){//判断下是否是元素节点
+                return pre;
+            }
+            pre = pre.previousSibling
+        }
+        return pre; //显人品的一行代码
+    }
+   /* var oLi2 = document.getElementById("li2");
+    console.log(getPrev(oLi2));*/
+
+   //3.getPrevAll 获取所有的哥哥元素节点
+    /**
+     * @param ele  指定的元素
+     * @return  ary  放着每一个哥哥元素节点
+     */
+    function getPrevAll(ele){
+        var ary = [];
+        var pre = getPrev(ele); //获取哥哥元素节点
+        while(pre){
+            ary.push(pre);
+            pre = getPrev(pre);//基于pre找他的哥哥元素节点
+        }
+        return ary;
+    }
+    var oLi2 = document.getElementById("li2");
+    console.log(getPrevAll(oLi2));
+
+    //思考题：getIndex(ele) 获取指定元素的索引
+</script>

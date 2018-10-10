@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            -webkit-user-select: none;
+            cursor: move;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
+<script src="3.event.js"></script>
+<script>
+    class Drag {
+        constructor(ele) {
+            this.ele = ele;
+            this.ele.addEventListener('mousedown', this.down.bind(this), false)
+        }
+
+        down(e) {
+            e.preventDefault();
+            this.x = this.ele.offsetLeft;
+            this.y = this.ele.offsetTop;
+            this.mx = e.clientX;
+            this.my = e.clientY;
+            this.MOVE = this.move.bind(this);
+            this.UP = this.up.bind(this);
+            document.addEventListener('mousemove', this.MOVE, false);
+            document.addEventListener('mouseup', this.UP, false);
+            fire.call(this.ele, 'dragStart', e);
+        }
+
+        move(e) {
+            this.ele.style.left = this.x + (e.clientX - this.mx) + 'px';
+            this.ele.style.top = this.y + (e.clientY - this.my) + 'px';
+            fire.call(this.ele, 'dragMove', e);
+        }
+
+        up(e) {
+            document.removeEventListener('mousemove', this.MOVE, false);
+            document.removeEventListener('mouseup', this.UP, false);
+            fire.call(this.ele, 'dragUp', e);
+        }
+    }
+
+    function getSpeed(e) {
+        if (!this.prevX) {
+            this.prevX = this.mx;
+        }
+        this.speedX = e.clientX - this.prevX;
+        this.prevX = e.clientX;
+    }
+
+    function fly() {
+        clearTimeout(this.timer);
+        this.speedX *= 0.98;
+        var rSide = (document.documentElement.clientWidth || document.body.clientWidth) - this.offsetWidth;
+        var lSide = 0;
+        var duration = this.offsetLeft + this.speedX;
+        if (duration >= rSide) {
+            duration = rSide;
+            this.speedX *= -1;
+        } else if (duration <= 0) {
+            duration = 0;
+            this.speedX *= -1;
+        }
+        this.style.left = duration + 'px';
+        if (Math.abs(this.speedX) > 0.5) {
+            this.timer = window.setTimeout(() => {
+                fly.call(this)
+            }, 30)
+        }
+    }
+
+    let g = 9.8;
+    let flag = 0;
+
+    function drop() {
+        clearTimeout(this.droptimer);
+        if (!this.dropSpeed) {
+            this.dropSpeed = 0;
+        }
+        this.dropSpeed += g;
+        this.dropSpeed *= 0.98;
+        var tSide = (document.documentElement.clientHeight || document.body.clientHeight) - this.offsetHeight;
+        var duration = this.offsetTop + this.dropSpeed;
+        if (duration >= tSide) {
+            this.style.top = tSide + 'px';
+            this.dropSpeed *= -1;
+            flag++;
+        } else {
+            this.style.top = duration + 'px';
+            flag = 0;
+        }
+        if (flag < 2) {
+            this.droptimer = window.setTimeout(() => {
+                drop.call(this)
+            }, 30)
+        }
+    }
+
+    let index = 0;
+
+    function increase() {
+        this.style.zIndex = ++index;
+        this.style.background = `rgb(${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)})`
+    }
+
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        let Div = divs[i];
+        new Drag(Div);
+        on(Div, 'dragMove', getSpeed);
+        on(Div, 'dragUp', fly);
+        on(Div, 'dragUp', drop);
+        on(Div, 'dragStart', increase)
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,180 @@
+.content{
+    width: 100%;
+    position: relative;
+
+}
+.content header{
+    height: 80px;
+    background: rgba(226, 61, 14, .01);
+    left:0;
+    top:0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.main{
+    margin: 0 auto;
+    width: 1080px;
+}
+.content header .main .logo{
+    float: left;
+    width: 100px;
+    height: 37px;
+    padding: 10px;
+
+}
+.content header .main .logo img{
+    width: 100%;
+
+}
+.content header .main .navl{
+    float: right;
+
+}
+.content header .main .navl li{
+    float: left;
+    padding-top: 25px;
+
+}
+.content header .main .navl li a{
+    padding: 8px 20px;
+    color: #ffffff;
+}
+.content header .main .navl ul .navleft{
+    position: relative;
+}
+.content header .main .navl ul .navleft .boxs{
+    background-color: #ffffff;
+    position: absolute;
+    width: 231px;
+   top: 66px;
+    border-radius: 5px;
+    display: none;
+
+}
+.content header .main .navl ul .navleft .boxs dl dd{
+    margin-top: 20px;
+}
+.content header .main .navl ul .navleft .boxs dl dd.dssa{
+    margin-bottom: 20px;
+}
+
+.content header .main .navl ul .navleft .boxs a{
+          color: #000000;
+    font-size: 20px;
+}
+.content header .main .navl ul .navleft .lingl:hover .content header .main .navl ul .navleft .boxs{
+    display: block;
+}
+.content header .main .navl ul .navleft .boxs a:hover {
+    color: red;
+}
+
+.content .banner{
+    width: 100%;
+
+}
+.content .banner img {
+    width: 100%;
+    position: relative;
+    top: -86px;
+}
+.content .banner .ranzi{
+position: absolute;
+    top: 36%;
+    left: 18%;
+
+}
+.content .banner .ranzi h1{
+    line-height: 1px;
+    font-size: 52px;
+    margin-bottom: 50px;
+}
+.content .banner .ranzi p{
+    display: inline-block;
+    font-size:22px ;
+    line-height:51px;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(0,0,0,.6);
+    border-radius: 6px;
+}
+.contenss{
+    width:100%;
+    height: 260px;
+    position: relative;
+    bottom: 86px;
+
+}
+.contenss li{
+    float: left;
+    width:25%;
+    height: 260px;
+    border-top:2px solid #fff;
+    border-right:2px solid #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.contenss li a{
+    display: block;
+    width:100%;
+    height: 260px;
+    background: url("../img/promo-01.jpg") no-repeat;
+    background-size: cover;
+}
+.contenss li a.img2{
+    background: url("../img/promo-02.jpg") no-repeat;
+    background-size: cover;
+}
+.contenss li a.img3{
+    background: url("../img/promo-03.jpg") no-repeat;
+    background-size: cover;
+}
+.contenss li a.img4{
+    background: url("../img/promo-04.jpg") no-repeat;
+    background-size: cover;
+}
+.contenss li h3{
+    padding-top:40px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+
+
+@media screen and (max-width: 760px){
+    .container header{
+        height: 46px;
+    }
+    .main{
+        width: 100%;
+    }
+    .content header .main ul{
+        display: none;
+    }
+    .content .banner .ranzi h1{
+        line-height: 1px;
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+    .content .banner .ranzi p{
+
+        font-size:16px ;
+        line-height:30px;
+    }
+   .contenss ul li h3{
+       font-size: 18px;
+   }
+   .mafan .chmafan ul li div{
+       float: left;
+       margin-left: 15%;
+   }
+    .mafan .chmafan ul li i{
+        width: 50px;
+        height: 50px;
+    }
+}

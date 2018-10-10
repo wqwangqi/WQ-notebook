@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+    var ary = [1,'2','zf','3',6,9];
+    console.log(ary);
+    var d = ary.splice();
+    //var d = ary.splice(0);//表示克隆数组  清空原数组
+    //var d = ary.splice(3);//如果第二个参数不传，表示从索引3一路截取到最后
+    //var d = ary.splice(3,1); //只截取索引3，这个一个，返回值也是数组
+    //var d = ary.splice(3,1,'aaa');//从索引3截取一个数组，用'aaa'来替换，返回值为截取到的值，原数组变为替换后的数组
+    //var d = ary.splice(3,0,'bbb'); //这个表示在索引3前面插入一个数值'bbb'
+    //var d = ary.splice(ary.length,0,'bbb'); 这个表示在数组的末尾增加一项
+
+
+
+
+    //var d = ary.slice();  //表示克隆数组
+    //var d = ary.slice(0);  //表示克隆数组
+    //var d = ary.slice(2);  // 表示从索引2一路截取到最后，返回值是截取后的数组，原数组不改变
+    //var d = ary.slice(2,4);   //表示从索引2 截取到索引4，不包括索引4,属于包前不包后
+    //var d = ary.slice(-4,-2); //如果索引为负数，表示将负数+数组长度返回的值，然后在进行截取，依然遵循包前不包后
+
+
+
+
+    //var d = ary.concat('郭家祥虎逼');  //数组的末尾加了 '郭家祥虎逼'
+    //var d = ary.concat(true,function () {});  //任何数据类型
+    //var d = ary.concat([1,2,3]);  //如果传入的是一个数组，会将数组展开，每个都拼接到数组末尾
+    //var d = ary.concat();  //克隆数组
+
+
+
+
+    //var d = ary.indexOf('zf');  //2
+    //var d = ary.indexOf(2);   //-1
+    //////var d = ary.indexOf((2), ! ==-1);
+    /*ary.push('3');
+     *console.log(ary);
+     *var d = ary.lastIndexOf('3');
+     *
+     * */
+    //var d = ary.reverse(); //括号内写不写无意义
+    //var newnew = [9,6,10,5,8,6,3,2,1];
+    //var d = newnew.sort();  //在不传函数的时候只能排10以内的数字
+    //var d = newnew.sort(function (a,b) {  // 针对所有的数字
+        //return a-b;  //a-b 属于让数组正序【从小到大】排列
+        //return b-a;  //b-a 属于让数组倒序【从大到小】排列
+    //});
+
+   /* var d = ary.forEach(function (item,index,input) {
+        //数组有多少项，当前这个函数执行多少次
+        //item：数组中的每一项
+        //index：数组中每一项对应的索引
+        //input：表示整个数组
+        console.log(item, index, input);
+    });*/
+     /*var d = ary.map(function (item,index,input) {
+     //数组有多少项，当前这个函数执行多少次
+     //item：数组中的每一项
+     //index：数组中每一项对应的索引
+     //input：表示整个数组
+     return item*10
+     });*/
+
+    //var d = ary.join('王'); //将数组中所有的逗号，变成指定符号，整体转成字符串
+    //var d = ary.join(' ');
+
+
+
+    console.log(d);
+    console.log(ary);
+</script>
+

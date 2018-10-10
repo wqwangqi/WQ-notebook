@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 300px;
+            height: 400px;
+            background: purple;
+            margin: 100px auto;
+        }
+        ul{
+            width: 300px;
+            height: 100px;
+            background: yellow;
+
+
+
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            list-style: none;
+            font-size: 20px;
+            color: gold;
+
+            float: left;
+            box-sizing: border-box;
+            line-height: 100px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid white;
+            border-radius: 50%;
+
+        }
+        ul li:nth-child(3){
+            border-right: none;
+        }
+        #box div{
+            width: 300px;
+            height: 300px;
+            font-size: 20px;
+            color: yellow;
+            text-align: center;
+            line-height: 300px;
+            background: purple;
+            display: none;
+        }
+        #box ul li.active {
+            background: purple;
+        }
+        #box div.active{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li class="active">james</li>
+        <li>kobe</li>
+        <li>paul</li>
+    </ul>
+    <div class="active">湖人</div>
+    <div>前湖人</div>
+    <div>火箭</div>
+
+</div>
+</body>
+</html>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+    //原生js
+    /*var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var content = box.getElementsByTagName('div');
+
+    for (var i = 0; i <lis.length ; i++) {
+        lis[i].index = i;
+        lis[i].onclick = function () {
+            for (var j = 0; j <lis.length ; j++) {
+                lis[j].className = '';
+                content[j].className = '';
+            }
+            this.className = 'active';
+            content[this.index].className = 'active';
+        }
+    }*/
+    //jq
+    $('#box ul li').on('click',function () {
+        $(this).addClass('active').siblings().removeClass('active').parent().nextAll('div').eq($(this).index()).addClass('active').siblings('div').removeClass('active');
+    })
+
+
+
+</script>

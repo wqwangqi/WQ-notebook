@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">box</div>
+<input type="text" id="input">
+</body>
+</html>
+<script>
+    /*
+    * 事件对象
+    * 当一个元素的事件行为被触发的时候，会执行相对应的方法，【执行函数】，在函数执行的时候，浏览器会默认给这个函数传一个形参【e】，这个形参就是事件对象，它记录了元素事件触发时一瞬间的信息；
+    *
+    * 事件对象是一个引用数据类型，它里面有很多信息组成的键值对，比如：鼠标触发时，距离body以及距离可视窗口X轴或者Y轴、事件类型、事件源【事件触发的元素】等...
+    *
+    * 1.鼠标事件行为  mouseEvent
+    * e.type  事件类型
+    * e.target  事件源【点击的元素】
+    * e.clientX  鼠标触发的时候距离可视窗口的X轴
+    * e.clientY 鼠标触发的时候距离可视窗口的Y轴
+    * e.pageX 鼠标触发的时候距离body的X轴
+    * e.pageY 鼠标触发的时候距离body的Y轴
+    * e.preventDefault  阻止事件默认行为   e.returnValue = false //ie下的
+    * e.stopPropagation 阻止事件冒泡      e.cancelBubble = true  //ie下的
+    *
+    * 2.键盘事件行为  keyboardEvent
+    * e.key  输入的内容【input框中的内容】
+    * e.code 触发键盘时的键值名称 【按键名称】 space alt
+    * e.keyCode 输入按键的键盘码值
+    * e.which 也是键盘码值，但是ie不支持【只存在于标准浏览器】
+    * 3.普通事件行为  event
+    *
+    *
+    * */
+    //dom0级事件
+    //点击事件
+    box.onclick = function (e) {
+        //e【事件对象】记录了元素事件【box】点击触发时的一瞬间信息
+        console.log(e);
+    };
+    //键盘事件
+    input.onkeydown = function (e) {
+        console.log(e);
+    };
+
+    //兼容问题的处理
+    //标准浏览器的事件对象在ie下面不兼容，我们需要写兼容模式
+    box.onclick = function (e) {
+        //ie下对事件对象做的兼容处理
+        //事件对象
+        e = e || window.event;
+        //事件源
+        e.target = e.target || e.srcElement;
+        //阻止事件的默认行为
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        //阻止事件的冒泡传播
+        e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;  //cancelBubble取消冒泡
+        //事件触发的时候距离body的距离
+        e.pageX = e.pageX||e.clientX+(document.documentElement.scrollLeft||document.body.scrollLeft);
+        e.pageY = e.pageY||e.clientY+(document.documentElement.scrollTop||document.body.scrollTop);
+
+    }
+</script>

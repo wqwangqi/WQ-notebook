@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,p{
+            margin: 0;
+        }
+        #box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid royalblue;
+            overflow-Y: scroll;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <p>我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸我是你爸爸</p>
+</div>
+
+</body>
+</html>
+<script>
+    /*
+    * css盒子模型：
+    * 标准盒模型：内容+padding
+    * 怪异盒模型： box-sizing: border-box   inherit   content-box
+    * box-sizing: border-box    表示盒子的宽度包括border
+    *box-sizing: inherit    继承父级盒模型属性
+    *box-sizing: content-box   标准盒模型
+    *
+    *
+    *
+    *js盒子模型：
+    * 盒子模型的属性在元素对象的私有属性上
+    *
+    *注意：我们学的13个盒子模型的属性，大部分都是只读的，只有scrollTop和scrollLeft这两个属性可以进行修改
+    *
+    * client系列
+    *
+    * clientWidth：盒子真实内容的宽度，不包括边框和滚动条【content+左右padding】
+    *clientHight：盒子真实内容的高度，不包括边框和滚动条【content+上下padding】
+    *clientLeft：盒子左边框的宽度  【左border】
+    *clientTop：盒子上边框的宽度   【上border】
+    *
+    * 一般情况下，我们用这个属性表示浏览器可视窗口的宽高，也可以用来表示元素的宽高
+    * 表示浏览器可视窗口的宽高【如果html没有的话，我们默认用body的宽高，一般情况下，html元素和body元素的宽高都是一样的】
+    * document.documentElement.clientWidth || document.body.clientWidth
+    * document.documentElement.clientHeight || document.body.clientHeight
+    *
+    *
+    *
+    * offset系列
+    *
+    * offsetWidth：整个盒子的宽度【border+左右padding+content】
+    * offsetHeight：整个盒子的高度【border+上下padding+content】
+    * offsetParent：父级参照物，【当父级设置了定位属性，脱离文档流之后，父级就变成了父级参照物】，如果元素的父级以上的元素都没有设置定位，那么元素的父级参照物是body，而body的父级参照物是null
+    * offsetLeft：当前元素外边框距离父级参照物内边框的左偏移量
+    * offsetTop：当前元素外边框距离父级参照物内边框的上偏移量
+    *
+    * 让盒子水平居中的方法
+    * box.style.marginLeft = ( (document.documentElement.clientWidth||document.body.clientWidth)-(box.offsetWidth))/2+'px'
+    *
+    * scroll系列
+    * scrollWidth：盒子真实内容的宽度【包括溢出和未溢出】
+    * 溢出：真实内容的宽度【clientWidth】+溢出的宽度
+    * 未溢出：真实内容的宽度【clientWidth】
+    * scrollHight：盒子真实内容的高度【包括溢出和未溢出】
+    * scrollLeft：当前盒子内容向左卷出去的距离
+    * scrollTop：当前盒子内容向上卷出去的距离
+    *
+    * 注意：scroll会计算盒子内容的高度或者宽度包括溢出隐藏和溢出滚动
+    * */
+    box.onscroll = function () {
+        console.log(box.scrollTop);
+    }
+
+    //当滚动条滑到最底部的时候
+    //scrollHeight = clientHeight+scrollTop
+
+
+    //简单的方法实现下拉加载
+    box.onscroll = function () {
+        let boxT = box.scrollTop;
+        let boxH = box.clientHeight;
+        let boxS = box.scrollHeight;
+        if (boxT+boxH+50>boxS){
+            box.children[0].innerHTML+='我是新内容'
+        }
+    }
+
+
+</script>

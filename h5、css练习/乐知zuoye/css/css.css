@@ -1,0 +1,142 @@
+li{
+    list-style: none;
+}
+.content{
+background-color: whitesmoke;
+    height: 108px;
+
+}
+.content .main{
+    width: 1200px;
+    margin: 0 auto;
+    height: 108px;
+
+
+
+}
+.content .main p{
+    float: left;
+    font-size: 22px;
+    line-height: 108px;
+}
+.content .main a{
+
+    float: left;
+    background-color: orangered;
+    color: white;
+    line-height: 50px;
+    font-size: 18px;
+    margin-left: 300px;
+    margin-top: 30px;
+    padding: 0 10px;
+    border-radius: 5px;/*盒子圆角*/
+
+}
+
+
+.listmain{
+    width: 1200px;
+    margin: 0 auto;
+    height: 380px;
+
+}
+.listmain li{
+    float: left;
+    margin-top: 84px;
+    margin-right: 50px;
+}
+.listmain li h3{
+    line-height: 26px;
+    font-weight: 100;
+}
+.listmain li p{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+
+.style{
+    height: 150px;
+    background: url("../img/bg.png") ;
+
+}
+.style .main{
+
+    padding-top: 35px;
+
+}
+.style .main h3{
+    font-size: 40px;
+    text-align: center;
+
+}
+.style .main p{
+    font-size: 15px;
+    text-align: center;
+
+}
+
+
+
+
+.yearmain{
+    margin: 0 auto;
+    height: 220px;
+    width: 1200px;
+
+}
+.yearmain li{
+    float: left;
+    margin-left: 10px;
+    margin-top: 80px;
+    margin-right: 60px;
+
+}
+.yearmain .clearfix{
+    margin-right: 0;
+}
+.yearmain li .icon{
+    display: inline-block;
+    width: 33px;
+    height: 35px;
+    background: url("../img/576.png")no-repeat;
+    float: left;
+
+
+
+}
+.yearmain li .icic{
+    float: left;
+    width: 237px;
+    height: 89px;
+    margin-left: 10px;
+    border-bottom: 2px solid #ff6600;
+}
+.yearmain li .icic h4{
+font-size: 34px;
+    font-weight: 100;
+}
+.yearmain li .icic p{
+
+    font-size: 20px;
+}
+.yearmain li .lion{
+    display: inline-block;
+    width: 41px;
+    height: 36px;
+    background: url("../img/987.png") no-repeat;
+    float: left;
+}
+.yearmain li .llin{
+    display: inline-block;
+    width: 55px;
+    height: 47px;
+background: url("../img/654.png");
+    float: left;
+}
+
+
+
+
+

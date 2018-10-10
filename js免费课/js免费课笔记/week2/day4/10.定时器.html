@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //window.setTimeout([fn],[interval]) 间隔时间内执行一次
+    //window.setInterval([fn],[interval]) 每隔一段时间执行一次 若不清除定时器，执行的次数是无数次
+    //window.clearTimeout(timer)  清除定时器
+    //window.clearInterval(timer)
+
+    //每隔1s控制台打印出从1开始累加的数，一直打印到10不再打印
+    var n = 0;
+    //timer 相当于定时器的编号
+    var timer = window.setInterval(function(){
+        n++;
+        console.log(n);
+        if(n===10){
+          window.clearTimeout(timer);
+          timer = null; //通过timer值来判断定时器是开启的还是清除的
+        }
+    },1000);
+
+
+
+
+</script>

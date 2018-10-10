@@ -1,0 +1,70 @@
+
+html{
+    font-size: 50px;
+}
+.box header{
+    margin-top: .37rem;
+}
+.box header i{
+    background: url("../img/aa-1.png") no-repeat;
+    width: .27rem;
+    height: .30rem;
+    display: inline-block;
+    float: left;
+}
+.box header h3{
+    font-size: .24rem;
+    color: #777777;
+    line-height: .44rem;
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 320px){
+    html{
+        font-size: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 300px;
+            border: 1px solid grey;
+            margin: 100px auto;
+        }
+        ul li{
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid red;
+        }
+        .bg1{
+            background: goldenrod;
+        }
+        .bg2{
+            background: green;
+        }
+        .bg3{
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>
+<script>
+    var lis = document.getElementsByTagName('li');
+    for(var i=0;i<lis.length;i++){
+        if (i%2) {
+            lis[i].className = 'bg2';
+            lis[i].index = 'bg2';
+        }else {
+            lis[i].className = 'bg1';
+            lis[i].index = 'bg1';
+        }
+        lis[i].onmouseover = function () {
+            this.className = 'bg3';
+        }
+        lis[i].onmouseout = function () {
+            this.className = this.index;
+        }
+    }
+</script>

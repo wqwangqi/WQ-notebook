@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background: rebeccapurple;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    function fn1(e) {
+        box.l = box.offsetLeft;
+        box.t = box.offsetTop;
+        box.mx = e.clientX;
+        box.my = e.clientY;
+        document.addEventListener('mousemove', fn2, false)
+    }
+
+    function fn2(e) {
+
+        var l = e.clientX - box.mx + box.l;
+        var t = e.clientY - box.my + box.t;
+        box.style.left = l + 'px';
+        box.style.top = t + 'px';
+    }
+
+    function fn3() {
+        document.removeEventListener('mousemove',fn2,false)
+    }
+    box.addEventListener('mousedown', fn1, false);
+    box.addEventListener('mouseup', fn3, false)
+</script>

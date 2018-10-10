@@ -1,0 +1,41 @@
+
+
+
+
+.content{
+    background-color: grey;
+ width: 800px;
+    margin: 0 auto;
+}
+.content h3{
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 100;
+}
+.content p{
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+}
+.content .list{
+    background-color: yellow;
+    font-size: 0px;
+
+}
+.content .list .info{
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+.content .list .info h5{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 30px;
+}
+.content .list .info p{
+   font-size: 13px;
+    line-height: 30px;
+    text-align: left;
+    text-indent: 2em;
+}

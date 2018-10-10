@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //1
+    function each(obj, callback) {
+        if ('length' in obj) {
+            for (var i = 0; i < obj.length; i++) {
+                var a = callback && callback.call(obj[i], i, obj[i]);
+                if (a === false){
+                    break
+                }
+            }
+        } else {
+            for (var key in obj) {
+                var a = callback && callback.call(obj[key], key, obj[key]);
+                if (a === false){
+                    break
+                }
+            }
+        }
+    }
+
+    each([1, 2, 3, 4], function (index, item) {
+        console.log(this);
+        //如果当前函数return false，结束循环
+
+
+    })
+
+
+    //2
+    //如果我们封装一个each  实现类数组、数组、对象，都可以进行便利，一旦发现return  false，停止循环
+    function each(obj, fn) {
+        //判断obj是：类数组、数组、对象   通过length来判断它是不是类数组或者数组
+        if ('length' in obj) {
+            //证明obj是类数组或者数组
+            for (var i = 0; i < obj.length; i++) {
+                var a = fn && fn.call(obj[i], i, obj[i]);
+                if (a === 'false') {
+                    break
+                }
+            }
+        } else {
+            for (var key in obj) {
+                fn && fn.call(obj[key], key, obj[key]);
+            }
+        }
+    }
+
+    each(lis, function (index, item) {
+        console.log(this);
+        if (item.innerText == 2) {
+            return false;
+        }
+    })
+
+</script>

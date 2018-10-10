@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //原型（prototype）模式：属性共享问题   放在原型上的属性是所有实例都能访问，这个原型上属性是公有的
+    function Person(name,age) {  //构造函数（类）
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.writeCss = function () {console.log('writeCss')};
+    var p1 = new Person('LILI',20);
+    var p2 = new Person('LIL',20);
+    //构造函数里的属性都是实例私有的
+    console.log(p1.writeCss == p2.writeCss);
+//属性查找的过程：
+    //=>先看实例上是否有，有则调用实例上的属性
+    //=>若实例上没有，则通过__proto__去所属类的原型上查找，若没有，继续通过__proto__往上查找，知道Object类的原型，若还没有，则结果为undefined
+    //原型有三句话：
+      // 1.所有的函数里都有一个属性叫prototype，它指向默认的原型对象
+     //2. 原型对象里面天生有一个属性叫constructor，它指向构造函数
+      //3.每个对象里都有一个属性叫__proto__,它指向所属类的原型
+</script>

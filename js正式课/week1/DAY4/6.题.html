@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var name='珠峰';
+    var age=300;
+    name = function(name,age,fn){
+        arguments[0]='珠峰培训';//arguments[0]和形参name是一一映射的关系
+        age=age && 10;
+        console.log(name,age);//"珠峰培训,undefined"
+    }(name);
+    console.log(name,age) //undefined 300
+
+
+
+    // 逻辑与 &&  两边同时为真才为真，有一边为假则假（判断语句）
+    // 逻辑或 ||  一边为真才为真，两边同时为假才为假 （判断语句）
+    //判断语句里 会最终转换成布尔类型，真和假  赋值运算中不会转换成布尔类型，而是得到具体的值
+    // &&  左边为真则返回右边，左边为假则返回左边 (赋值运算中)
+    // ||  左边为真则返回左边，左边为假则返回右边 (赋值运算中)
+</script>

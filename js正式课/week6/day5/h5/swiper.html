@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script>
+        ~(function () {
+            var desW = 640;
+            var winW = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = winW/desW*100+'px';
+        })()
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <img src="swiper/page1-text1.png" alt="">
+                <img src="swiper/page1-text2.png" alt="">
+                <img src="swiper/page1-text3.png" alt="">
+                <img src="swiper/page1-text4.png" alt="">
+            </div>
+            <div class="swiper-slide slide2">
+                <img src="swiper/page2-text1.png" alt="">
+                <img src="swiper/page2-text2.png" alt="">
+                <img src="swiper/page2-text3.png" alt="">
+                <img src="swiper/page2-text4.png" alt="">
+            </div>
+
+        </div>
+        <!-- 如果需要分页器 -->
+
+
+        <!-- 如果需要导航按钮 -->
+        <!--<div class="swiper-button-prev"></div>-->
+        <!--<div class="swiper-button-next"></div>-->
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/swiper.min.js"></script>
+<script>
+    let mySwiper = new Swiper ('.swiper-container', {
+        direction: 'vertical',  //vertical 纵向的   horizontal 横向的
+        //loop: true,   //循环的
+        onTransitionEnd: function(swiper) {  //当滑块滑动结束时触发
+            var curIndex = swiper.activeIndex;  //当前显示滑块的索引
+            var slides = swiper.slides;  //所有的滑块
+            [].forEach.call(slides,function (item,index) {
+                item.id = '';
+                //如何确定这个滑块是当前显示的滑块
+                if (curIndex==index){
+                    item.id = 'page'+(index+1);
+                }
+            })
+        },
+        onInit:function (swiper) {
+            let slides = swiper.slides;//获取所有的滑块
+            slides[0].id = "page1"
+        },
+        effect : 'flip',
+        //speed:2000,
+        // // 如果需要分页器
+        // pagination: '.swiper-pagination',
+        //
+        // // 如果需要前进后退按钮
+        // nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
+    })
+
+</script>

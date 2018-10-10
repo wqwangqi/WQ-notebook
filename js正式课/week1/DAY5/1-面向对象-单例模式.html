@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var loginModel = {
+        login:function () {
+            console.log('login');
+        },
+        register:function () {
+            this.login();  //在同一模块里调用其他的方法
+            console.log('register');
+        }
+    };
+    loginModel.register();
+    var emailModel = {
+        login:function () {
+            console.log('checkEmail');
+        },
+        checkEmail:function () {
+            loginModel.login();
+            console.log('checkUser');
+        }
+    };
+    emailModel.checkUser();
+    //升级单例模式 ->高级单例模式
+    //需求：部分功能其他模块能访问，有些功能是内部模块的，其他功能不能访问
+    //解决了私有和公有问题
+
+    var loginModel = (function(){
+        //在这里面操作的功能是私有的，若想其他模块能访问，只要放在对象中返回就行
+        var name="lily";
+        function login(){console.log("login")};
+        function register(){console.log("register")};
+        return {
+            login:login
+        }
+    })();
+
+    var emailModel = {
+        name:"lucy",
+        checkUser:function(){
+            loginModel.register();
+            console.log("checkUser");
+        }
+    }
+    emailModel.checkUser();
+
+
+
+
+</script>

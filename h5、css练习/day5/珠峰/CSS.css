@@ -1,0 +1,68 @@
+a{
+    text-decoration: none;
+}
+.header{
+    background-color: darkseagreen;
+   width: 1000px;
+    height: 80px;
+  margin: 0 auto;
+
+
+}
+.header .log{
+    display: inline-block;
+
+    margin-right: 80px;
+    vertical-align: middle;
+}
+.header .log img{
+    width: 176px;
+    height: 52px;
+}
+.header .nav{
+    font-size: 15px;
+    display: inline-block;
+   margin-right: 80px;
+    line-height: 80px;
+
+
+}
+.header .nav a{
+    margin-right: 30px;
+
+}
+.header .nav a:hover{
+    color: yellow;
+    font-weight: bold;
+}
+.header .login{
+    display: inline-block;
+
+}
+.header .login a{
+    margin-left: 20px;
+}
+.header .login span i{
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    background: url("../1-/鼠标经过/img/11.png")no-repeat;
+
+    vertical-align: middle;
+
+
+}
+.header .login span:hover i{
+    background: url("../1-/鼠标经过/img/QQ图片20180713104100.png");
+}
+.header .login span:hover{
+   color: cadetblue;
+}
+.header .login a{
+    color: grey;
+    font-size: 20px;
+}
+.header .login a:hover{
+    color: red;
+    font-weight: bold;
+}

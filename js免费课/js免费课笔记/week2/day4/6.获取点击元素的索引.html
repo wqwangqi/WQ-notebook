@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--天生就有的称为固有属性 自己添加的属性称为自定义属性-->
+<input type="button" value="第一个按钮"  name="a" >
+<input type="button" value="第二个按钮"  name="b" >
+<input type="button" value="第三个按钮" name="c" >
+<input type="button" value="第四个按钮" name="d">
+<input type="button" value="第五个按钮" name="e">
+
+</body>
+</html>
+<script>
+    //自定义属性 利用对象存储值的特征
+    //获取每个按钮，绑定点击事件
+    var oInputs = document.getElementsByTagName("input");//对象 类数组
+    //for循环时，只有绑定函数的定义阶段，没有执行，自己点击时，每个函数执行
+   for(var i = 0;i<oInputs.length;i++){
+       oInputs[i].zhufeng = i;
+       console.dir(oInputs[i])
+       oInputs[i].onclick = function(){  //让onclick值等于function
+          /* alert(i); */  //没执行时  alert(i)是字符串
+          //this 表示当前点击的元素
+           console.log(this.zhufeng);
+       }
+   }
+   //for执行的速度非常快，在没点击之前，for循环已经结束，i的值5
+</script>

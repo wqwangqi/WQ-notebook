@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 继承：子类继承【操作或者获取】父类的一些属性和方法
+    *
+    * */
+    /*
+    * 1.call继承：子类私有继承父类私有
+    *函数的三种身份
+    * 1.普通函数
+    * 2.构造函数【类】
+    * 3.函数类的一个实例【对象】
+    * */
+/*
+    function fn() {}
+    //把函数当做一个对象
+    fn.a = 1;
+    console.log('a' in fn);
+    //函数是一个普通函数
+    fn()
+    //函数是一个构造函数
+    new fn*/
+
+    //构造函数里面不用写return，它会自动返回
+    (function () {
+        function Parent() {
+            this.name='zf';
+            this.age = '8'
+            //name 和 age都是Parent的私有属性
+        }
+        Parent();
+        function Child() {
+
+            Parent.call(this);  //相当于在Child的内存空间添加了Parent的this的两个属性
+            //this.age; //属性名重写会被重写
+            this.name='china';
+
+
+        }
+
+        console.log(new Child().name);
+
+    })()
+
+
+    /*
+    * 2.原型继承:子类继承父类的私有属性和公有属性
+    *
+    * */
+    function Parent() {}
+    Parent.prototype = {
+        getS(){
+            console.log(1);  //1  它是一个函数
+        }
+        //getS:()=>{}
+    }
+    new Parent().getS()
+    //new Parent().constructor
+    function Child(){}
+
+
+    var obj = {name:'wangqi'};
+    var obj1 = {age:22};
+    Object.assign(obj,obj1);
+    Object.assign(obj1,obj);
+    console.log(obj);//{name: "wangqi", age: 22}
+    console.log(obj1);//{age: 22, name: "wangqi"}
+
+
+
+    /*
+    * 寄生组合继承：子类私有继承父类私有，子类公有继承父类公有
+    *
+    * */
+
+    // Object.create()
+    //将形参当做返回值的公有属性和方法，而返回值默认是一个对象
+    Object.create = function () {
+        var a = {};
+        a.__proto__ = obj;
+        return a
+    };
+    var obj = {name:'zf'};
+    console.log(Object.create(obj));
+    console.log(obj);
+
+
+</script>

@@ -1,0 +1,124 @@
+li{
+     list-style: none;
+     cursor: pointer;
+ }
+.moo{
+    height: 360px;
+
+}
+.moo .main{
+    width: 1205px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+.moo .main .png{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.moo .main .png .b{
+    display: none;
+}
+.moo .main .png .c{
+    display: none;
+}
+.moo .main .png .d{
+    display: none;
+}
+.moo .main .kj li{
+    width: 240px;
+    height: 72px;
+    background-color: #2b7dd1;
+
+
+
+
+}
+.moo .main .kj li a{
+    font-size: 14px;
+    color: white;
+    height: 72px;
+    line-height: 72px;
+    margin-left: 40px;
+    border-bottom: 1px solid rgba(255,255,255,.44);
+    display: block;
+    width: 190px;
+}
+.moo .main .kj li a i{
+    background: url("../img/jiantou.png") no-repeat;
+    width: 7px;
+    height: 13px;
+
+}
+.moo .main .kj{
+    position: relative;
+    width: 240px;
+
+
+
+
+
+}
+.moo .main .kj .kjz{
+    display: none;
+    background-color: rgba(2,0,0,.2);
+    position: absolute;
+    left: 240px;
+    top: 0px;
+
+
+}
+.moo .main .kj:hover .kjz{
+    display: block;
+}
+.moo .main .kj .kjz dl{
+    display: inline-block;
+    width: 574px;
+    height: 360px;
+    background: url("../img/6541.png") no-repeat;
+    /*padding-left: 23px;
+    padding-top: 20px;*/
+
+}
+.moo .main .kj .kjz .ub{
+    position: absolute;
+    left: 0;
+    top: -72px;
+    background: url("../img/6547.png") no-repeat;
+
+}
+.moo .main .kj .kjz .yv{
+    position: absolute;
+    left: 0;
+    top: -144px;
+
+}
+.moo .main .kj .kjz .rx{
+    position: absolute;
+    left: 0;
+    top: -216px;
+    background: url("../img/6547.png") no-repeat;
+
+}
+.moo .main .kj .kjz .wa{
+    position: absolute;
+    left: 0;
+    top: -288px;
+
+}
+.moo .main .kj .kjz dl dt{
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    color: #0b0b0b;
+}
+.moo .main .kj .kjz dl dd{
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    color: #4a4b4b;
+}
+
+
+

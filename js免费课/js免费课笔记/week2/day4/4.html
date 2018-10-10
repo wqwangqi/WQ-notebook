@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function sum(){
+        var total = null;
+        for(var i = 0;i<arguments.length;i++){
+            if(!isNaN(arguments[i])){
+                total+=Number(arguments[i]);
+            }
+        }
+        return total;
+    }
+    var total =  sum(10,5,20,"zhufeng","111")
+    console.log(total);
+</script>

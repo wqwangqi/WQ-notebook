@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //arguments[0] 第一个实参  arguments[1]第二个实参....最后一个实参arguments[arguments.length-1]
+    //所有实参的个数 arguments.length
+
+    //求任何有效数实参个数之和 isNaN() 有效数则是false 不是则为true
+    function sum(){//代号 不是一个具体值，用来存储实参的值 形参(实参确定个数时才会使用)
+        //console.log(typeof arguments); //对象类型
+        //console.log(arguments instanceof Array);//false 不是数组类型
+        //类数组  属性名是数字 有length属性  对象可以说是类数组
+        //console.log(arguments[arguments.length-1],arguments.length);
+        //1.如何拿到实参  arguments   arguments[0] arguments[1]  arguments[2]
+        //2.如何获取每一个实参  for循环
+        //3.每一个实参累加起来
+        var total = null;//起了一个标识作用
+        for(var i= 0;i<arguments.length;i++){
+            //console.log(arguments[i]);
+            //第一次 i = 0  arguments[i]->arguments[0] ->10 total= arguments[0];
+            //第二次 i = 1  arguments[i]->arguments[1]->5   total = total+arguments[1]
+            //第三次 i= 2 arguments[i] ->arguments[2]->20  total = total+arguments[2]
+           //total = total+arguments[i];
+            if(!isNaN(arguments[i])){//1.isNaN()结果为false 2.if的条件判断为true
+                total+=Number(arguments[i]);
+            }
+        }
+        return total; //返回值
+
+    }
+    //sum(10)//方法运行时传的参数叫实参
+   var total =  sum(10,5,20,"zhufeng","111");//1.函数运行 2.拿到return后的值
+    console.log(total);
+</script>

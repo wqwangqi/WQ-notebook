@@ -1,0 +1,78 @@
+.box{
+    background-color: darkseagreen;
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+
+}
+.box .f{
+    float: left;
+   margin-top: 10px;
+
+
+}
+.box .f img{
+    width: 172px;
+    height: 56px;
+}
+.box .g{
+    float: left;
+    margin-left: 100px;
+    margin-top: 30px;
+
+}
+.box .g a:hover{
+    color: yellow;
+}
+.box .g a{
+    margin-right: 30px;
+    color: grey;
+}
+.box .h{
+    float: right;
+    margin-top: 30px;
+position: relative;
+    line-height: 80px;
+}
+.box .h span{
+    color: grey;
+
+}
+.box .h span i{
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    background: url("../img/10.png") no-repeat;
+    vertical-align: middle;
+}
+.box .h span:hover i{
+    background: url("../img/2.png") no-repeat;
+}
+.box .h span:hover{
+    color: deepskyblue;
+
+}
+.box .h a{
+    margin-left: 20px;
+    color: grey;
+
+}
+.box .h a:hover{
+    color: yellow;
+}
+.box .h .jo{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 300px;
+    height: 175px;
+    background-color: grey;
+    display: none;
+    font-size: 20px;
+    margin-left: -150px;
+}
+.box .h:hover .jo{
+    display: block;
+}
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background: purple;
+            /*position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            margin: auto;*/
+            /*position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -200px;*/
+            border: 10px solid yellow;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    /*
+    * css盒子模型
+    * 标准盒模型：内容的宽度+左右两边padding的宽度
+    * 怪异盒模型：box-sizing :border-box   inherit   content-box
+    *
+    * */
+    //在js中将盒子水平居中，用offset和client
+
+    // var box =document.getElementById('box');
+    // var boxw = box.offsetWidth;    //盒子的真实宽度
+    // var boxh = box.offsetHeight;    //盒子的真实高度
+    // var a = document.documentElement.clientWidth;   //可视窗口的宽度
+    // var b = document.documentElement.clientHeight;  //可视窗口的高度
+    // box.style.marginLeft = (a-boxw)/2+'px';
+    // box.style.marginTop = (b-boxh)/2+'px';
+
+   // 封装一个方法，求出当前元素距离body的偏移量
+    function offset(ele) {
+        //先求出元素距离父级参照物偏移量
+        let l = ele.offsetLeft;
+        let t = ele.offsetTop;
+        let parent = ele.offsetParent;
+        //判断父级参照物是不是body，如果是body，证明已经到了最外层的body元素，就不用再循环了，如果不是body，我们继续循环父级参照物，累加父级参照物的边框以及偏移量
+        while(parent.tagName!='BODY'){  //如果父级不是body进入循环
+            //需要累加父级参照物的边框
+            l += parent.clientLeft;  //+边框
+            t += parent.clientTop;
+            //累加父级参照物的偏移量
+            l += parent.offsetLeft;   //+边框的偏移量
+            t += parent.offsetTop;
+            //更新父级参照物
+            parent = parent.offsetParent
+        }
+        /*
+        * 在ie8  有兼容问题，它的左偏移量包括边框的宽度
+        * window.navigator.userAgent  来判断当前浏览器是什么版本的浏览器
+        * /MSIE 8/.test(window.navigator.userAgent)  符合条件就是ie8
+        * */
+        return {left:l,top:t}
+    }
+    offset(box).left;
+</script>

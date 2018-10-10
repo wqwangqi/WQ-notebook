@@ -1,0 +1,65 @@
+.main{
+    margin: 0 auto;
+    width: 1204px;
+    position: relative;
+}
+.actual li{
+
+    position: relative;
+
+
+}
+.actual li .center1{
+    background: url("../img/writebg.png") no-repeat;
+    width: 250px;
+    height: 112px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all .3s;
+}
+.actual li img{
+    width: 250px;
+}
+.actual li .center1 h4{
+    font-size: 14px;
+    color: #1e1e1e;
+
+}
+.actual li .center1 p{
+    font-size: 12px;
+    color: #9e9d9d;
+    width: 250px;
+
+}
+.actual li .center1:hover{
+position: absolute;
+    left: 0;
+    top: 36px;
+}
+.actual li .font1{
+    background-color: white;
+
+    width: 250px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+.actual li .font1 .money{
+    float: left;
+    font-size: 12px;
+    color: #c71b1b;
+}
+.actual li .font1 .study{
+    float: right;
+    font-size: 12px;
+    color: #868484;
+}
+.actual li .center1{
+    position: absolute;
+    left: 0;
+    top: 72px;
+
+}
+

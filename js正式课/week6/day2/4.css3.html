@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin: 100px auto;
+        }
+        #box:hover{
+            transition: all 1s linear;
+            /*transform: rotate(360deg);*/
+            transform-origin: top;
+            /*transform: skew(60deg);*/
+            /*transform: scale(0.4);*/
+            transform: translate(50px,50px);
+        }
+    </style>
+</head>
+<body>
+<a href="http://baidu.com" target="_blank">baidu</a>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    /*
+    * css3
+    *
+    * 选择器：
+    * 后代选择器
+    * 子代选择器
+    * 兄弟选择器 +
+    * 通配符选择器
+    * ...
+    *
+    * :nth-child()  ：父级下的第一个子级元素
+    * :nth-child(2n+1)  ：子级元素中的基数
+    * :nth-child(odd)  ：子级元素中的基数
+    * :nth-child(2n)  ：子级元素中的偶数
+    * :nth-child(even)  ：子级元素中的偶数
+    * :first-child  ：第一个子级元素
+    * :last-child  ：最后一个子级元素
+    * :nth-of-type(1) ：父级元素下面相同类型的第一个子元素
+    * only-child   ： 仅仅只有这一个孩子
+    * only-of-type  ：仅限只有这一个类型的元素
+    * empty  ：元素中为空的元素
+    *
+    * [class^='c'] 以c开头所有的类名选择器
+    * [class*='c'] 类名中只要有c的选择器
+    * not()
+    *
+    * target:_blank  开启一个新的页面
+    * */
+
+
+
+    /*
+    * transition 过渡动画：某一个属性，从开始到结束，展示的效果
+    * transform  变形：不是动画，它会依托一下属性让元素达到某个效果
+    * animation  js帧动画：结合关键字keyframes可以实现让元素完成整个帧动画
+    * 它们都是符合属性，也可以将它们拿出来
+    *
+    * 1.transition
+    * transition-property  过渡属性
+    * transition-duration 过渡、花费时间
+    * transition-delay 延迟时间
+    * transition-timing-function 运动类型
+    *   linear：（匀速）
+    *   ease-in：(加速)
+    *   ease-out：（减速）
+    *   ease-in-out：（先加速后减速）
+    *   ease：（逐渐变慢）默认值
+    *   cubic-bezier 贝塞尔曲线
+    *
+    * 2.transform
+    *   rotate()    旋转   单位：deg
+    *   旋转的时候有一个基准点:transform-origin:center【默认是center】
+    *   skew()
+    *   倾斜旋转：表示倾斜多少度
+    *   scale()
+    *   缩放：默认值是1，对元素实现放大缩小
+    *   translate()
+    *   位移：向不同的方向移动多少距离
+    *
+    * 3.animations   关键帧动画
+    * @keyframes 动画名称{
+    *     0%~100%  可以设置不同的效果
+    * }
+    *
+    * animations  动画名称  时间【必填】
+    * anmiations  动画名称  时间   运动效果【函数】
+    * 可选属性  延迟时间、运动方向、重复次数、动态状态、动画结束后的状态
+    * */
+</script>

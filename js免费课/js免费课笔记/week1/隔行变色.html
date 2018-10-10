@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: black;
+            width: 100%;
+            height: 100%;
+        }
+        ul{
+            list-style: none;
+            width: 300px;
+
+            margin: 0 auto;
+            border: 1px solid grey;
+
+        }
+        ul li{
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid red;
+        }
+        .bg1{
+            background: green;
+        }
+        .bg2{
+            background: yellow;
+        }
+        .bg3{
+            background: pink;
+        }
+        .bg4{
+            background: blue;
+        }
+        .bg5{
+            background: peru;
+        }
+      /*  li:nth-child(odd){
+            background: green;
+        }
+        li:nth-child(even){
+            background: red;
+        }*/
+    </style>
+</head>
+<body>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+</body>
+</html>
+<script>
+  var lis = document.getElementsByTagName('li');   //通过标签名获取到的元素集合
+    for(var i = 0; i<lis.length; i++){
+        //lis[0].className = 'bg1'
+        lis[i].className = 'bg1';
+        if (i%2){
+            lis[i].className = 'bg1';
+            lis[i].index = 'bg4'
+        }else{
+            lis[i].className = 'bg2';
+            lis[i].index = 'bg5'
+        }
+
+        lis[i].onmouseover = function () {
+          //  console.log(this.innerHTML);
+            this.className = 'bg3';
+
+        }
+        //自定义属性：在当前的li标签中将之前设置的颜色当做属性保存起来
+        //滑出的时候，我们
+        lis[i].onmouseout = function () {
+            this.className = this.index
+
+        }
+
+    }
+
+    //给每一行进行渲染颜色，需要循环每一行
+</script>

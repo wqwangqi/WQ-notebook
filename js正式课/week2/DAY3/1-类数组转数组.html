@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>
+<script>
+
+    var lis = document.getElementsByClassName('li');
+    console.log(lis);
+
+    function toArray(lis){
+        if('getComputedStyle' in window){
+            //表示是标准浏览器
+            return [].slice.call(lis);
+        }else{
+            //ie浏览器
+            var newAry = [];
+            for(var i = 0;i<lis.length;i++){
+                newAry.push(lis[i]);
+            }
+            return  newAry;
+        }
+    }
+    var ary = toArray(lis);
+    console.log(ary);
+</script>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 300px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid grey;
+        }
+        #box ul{
+            list-style: none;
+            width: 300px;
+            height: 100px;
+            background: green;
+            cursor: pointer;
+
+        }
+        #box ul li:after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        #box ul li{
+            width: 100px;
+
+            font-size: 20px;
+            color: yellow;
+            float: left;
+            line-height: 100px;
+            text-align: center;
+            border-right: 2px dashed grey;
+            box-sizing: border-box;
+
+
+        }
+
+        #box ul li:nth-child(3){
+            border-right: none;
+        }
+        #box div{
+            font-size: 18px;
+            width: 300px;
+            height: 400px;
+            background: purple;
+            line-height: 400px;
+            text-align: center;
+            display: none;
+
+        }
+        #box ul li.active{
+            background: orangered;
+        }
+        #box div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <ul>
+        <li class="active">湖人</li>
+        <li>火箭</li>
+        <li>马刺</li>
+    </ul>
+    <div class="active">詹姆斯</div>
+    <div>哈登</div>
+    <div>波波维奇</div>
+</div>
+
+
+
+</body>
+</html>
+<script>
+/*
+    var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var contents = box.getElementsByTagName('div');
+    for (var i=0;i<lis.length;i++){
+        lis[i].index = i;
+        lis[i].onclick = function () {
+            for (var j = 0;j<lis.length;j++){
+                lis[j].className = '';
+                contents[j].className = '';
+
+            }
+            this.className = 'active';
+            contents[this.index].className = 'active';
+        }
+    }*/
+/*var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var contents = box.getElementsByTagName('div');
+
+    for(var i =0;i<lis.length ;i++){
+        lis[i].index = i;
+        lis[i].onclick = function () {
+            for(var j =0;j<lis.length ;j++){
+                lis[j].className = '';
+                contents[j].className = '';
+            }
+            this.className = 'active';
+            contents[this.index].className = 'active';
+        }
+    }*/
+/* var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var contents = box.getElementsByTagName('div');
+    for(var i =0;i<lis.length ;i++){
+        lis[i].index = i;
+        lis[i].onclick = function () {
+            for(var j =0;j<lis.length ;j++){
+                lis[j].className = '';
+                contents[j].className = '';
+
+            }
+            this.className = 'active';
+            contents[this.index].className = 'active';
+        }
+    }*/
+/* var box = document.getElementById('box');
+   var lis = box.getElementsByTagName('li');
+   var contents = box.getElementsByTagName('div');
+   for(var i =0;i<lis.length ;i++){
+       lis[i].index = i;
+       lis[i].onclick = function () {
+           for(var j =0;j<lis.length ;j++){
+               lis[j].className = '';
+               contents[j].className = '';
+           }
+           this.className = 'active';
+           contents[this.index].className = 'active';
+       }
+
+   }*/
+/*var box = document.getElementById('box');
+var lis = box.getElementsByTagName('li');
+var contents = box.getElementsByTagName('div');
+for(var i =0;i<lis.length ;i++){
+    lis[i].index = i;
+    lis[i].onclick = function () {
+        for(var j =0;j<lis.length ;j++){
+            lis[j].className = '';
+            contents[j].className = '';
+        }
+        this.className = 'active';
+        contents[this.index].className = 'active';
+    }
+}*/
+/*var box = document.getElementById('box');
+var lis = box.getElementsByTagName('li');
+var contents = box.getElementsByTagName('div');
+for(var i =0;i<lis.length ;i++){
+    lis[i].index = i;
+    lis[i].onclick = function () {
+        for(var j =0;j<lis.length ;j++){
+            lis[j].className = '';
+            contents[j].className = '';
+        }
+        this.className = 'active';
+        contents[this.index].className = 'active';
+    }
+}*/
+/*var box = document.getElementById('box');
+var lis = box.getElementsByTagName('li');
+var contents = box.getElementsByTagName('div');
+for(var i =0;i<lis.length ;i++){
+    lis[i].index = i;
+    lis[i].onclick = function () {
+        for (var j=0;j<lis.length;j++){
+            lis[j].className = '';
+            contents[j].className = '';
+        }
+        this.className = 'active';
+        contents[this.index].className = 'active';
+    }
+
+}*/
+/*var box = document.getElementById('box');
+var lis = box.getElementsByTagName('li');
+var contents = box.getElementsByTagName('div');
+for(var i =0;i<lis.length ;i++){
+    lis[i].index = i;
+    lis[i].onclick = function () {
+        for(var j =0;j<lis.length ;j++){
+            lis[j].className = '';
+            contents[j].className = '';
+        }
+        this.className = 'active';
+        contents[this.index].className = 'active';
+    }
+
+}*/
+/*var box = document.getElementById('box');
+var lis = box.getElementsByTagName('li');
+var contents = box.getElementsByTagName('div');
+for(var i =0;i<lis.length ;i++){
+    lis[i].index = i;
+    lis[i].onclick = function () {
+        for(var j =0;j<lis.length ;j++){
+            lis[j].className = '';
+            contents[j].className = '';
+        }
+        this.className = 'active';
+        contents[this.index].className = 'active';
+
+    }
+
+}*/
+/*
+var box = document.getElementById('box');
+var lis = box.getElementsByTagName('li');
+var contents = box.getElementsByTagName('div');
+for(var i =0;i<lis.length ;i++){
+    lis[i].index = i;
+    lis[i].onclick = function () {
+        for(var j =0;j<lis.length ;j++){
+            lis[j].className = '';
+            contents[j].className = '';
+        }
+        this.className = 'active';
+        contents[this.index].className = 'active';
+    }
+}
+*/
+var box = document.getElementById('box');
+var lis = box.getElementsByTagName('li');
+var contents = box.getElementsByTagName('div');
+for(var i =0;i<lis.length ;i++){
+    lis[i].index = i;
+    lis[i].onclick = function () {
+        for(var j =0;j<lis.length ;j++){
+            lis[j].className = '';
+            contents[j].className = '';
+        }
+        this.className = 'active';
+        contents[this.index].className = 'active';
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+</script>

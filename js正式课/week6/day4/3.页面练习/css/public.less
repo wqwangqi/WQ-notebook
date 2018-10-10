@@ -1,0 +1,29 @@
+@color-white:white;
+@url:"../img1";
+.pos(@position:absolute;@left:0;@right:auto;@top:0;@bottom:auto;@zIndex:0){
+  position: @position;
+  left: @left;
+  right: @right;
+  bottom: @bottom;
+  z-index: @zIndex;
+}
+.transition(@property:all;@duration:0s;@timing-function:ease;@delay:0s){
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -ms-transition: @arguments;
+  -o-transition: @arguments;
+  transition: @arguments;
+}
+.css3(@k,@v){
+  -webkit-@{k}:@v;
+  -moz-@{k}:@v;
+  -ms-@{k}:@v;
+  -o-@{k}:@v;
+  @{k}:@v;
+}
+
+div{
+  .css3(transition,rOtate(45deg  ))
+}
+
+

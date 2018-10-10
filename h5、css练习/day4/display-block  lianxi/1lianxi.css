@@ -1,0 +1,29 @@
+
+*{margin: 0px;
+    padding: 0px;
+}
+
+li{list-style: none}
+.box{
+    background-color: darkgrey;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+.box h3{
+    background-color: yellow;
+    font-size: 30px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.box ul li{
+    font-size: 14px;
+    display: none;
+
+}
+.box:hover ul li{
+    display: block;
+}
+
+
+

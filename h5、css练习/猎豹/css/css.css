@@ -1,0 +1,136 @@
+li{
+    list-style: none;
+}
+.box{
+    background-color: orangered;
+}
+.box .header{
+    background:rgba(191,207,214,.3);
+    height: 88px;
+    width: 100%;
+}
+.box .header .main{
+    margin: 0 auto;
+    width: 960px;
+
+
+}
+.box .header .main .a{
+    background: url("../img/logo.png") no-repeat;
+    width: 270px;
+    height: 51px;
+    display: inline-block;
+    margin-top: 20px;
+    padding-bottom: 13px;
+}
+.box .header .main ul{
+    float: right;
+    height: 88px;
+
+}
+.box .header .main li{
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    line-height: 20px;
+    margin-right: 60px;
+    margin-top: 35px;
+    padding-bottom: 23px;
+cursor: pointer;
+}
+.box .header .main .left{
+    padding-left: 15px;
+}
+.box .header .main .nomargin{
+    margin-right: 15px;
+}
+
+
+.box .banner .main{
+    margin: 0 auto;
+    width: 960px;
+    position: relative;
+}
+.box .banner .main .pic2 img{
+    margin-top: -50px;
+}
+.box .banner .main .pic1{
+    display: none;
+}
+.box .banner .main  a .b{
+    background: url("../img/l-btn.png") no-repeat;
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    left: -200px;
+    top: 250px;
+
+}
+.box .banner .main a .c{
+    background: url("../img/r-btn.png") no-repeat;
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    right: -200px;
+    top: 250px;
+}
+
+
+.footer .main{
+    margin: 0 auto;
+    width: 960px;
+
+}
+.footer .main ul{
+    padding-right: 30px;
+    margin-top: 20px;
+
+}
+.footer .main ul li{
+    float: right;
+    margin-left: 50px;
+
+
+}
+.footer .main ul .noMargin{
+    margin-right: 0;
+
+}
+.footer .main ul li i{
+    margin: 0 auto;
+}
+.footer .main ul li .d{
+    background: url("../img/aaaa_09.jpg") no-repeat;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.footer .main ul li .e{
+    background: url("../img/aaaa_07.jpg") no-repeat;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.footer .main ul li .f{
+    background: url("../img/aaaa_05.jpg") no-repeat;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.footer .main ul li .g{
+    background: url("../img/aaaa_03.jpg") no-repeat;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.footer .main ul li h3{
+font-size: 15px;
+    color: #000;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        input{
+            display: none;
+
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: yellow;
+            border-radius: 25px;
+        }
+        label span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: grey;
+            border-radius: 50%;
+            transition: all .5s;
+
+        }
+        input:checked+label span{
+            transform: translatex(50px);
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+<input type="checkbox" id="input1" name="sex">
+<label for="input1">
+    <span></span>
+</label>
+
+
+
+
+
+</body>
+</html>

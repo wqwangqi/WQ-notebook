@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        body,html{
+            width: 100%;
+            height: 300%;
+            background: -webkit-linear-gradient(red,orange,yellow,green,royalblue,blue,purple);
+        }
+        #box{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: purple;
+            background: rgba(0,0,0,.5);
+            font-size: 25px;
+            line-height: 50px;
+            text-align: center;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        UP
+    </div>
+</body>
+</html>
+<script src="utils.js"></script>
+<script>
+    var box = document.getElementById('box');
+    window.onscroll = function () {
+        let winH = utils.win('clientHeight');
+        let winS = utils.win('scrollTop');
+        if (winS>=winH){
+            box.style.display = 'block'
+        } else {
+            box.style.display = 'none'
+        }
+    };
+    var duration = 2000;
+    box.onclick = function(){
+        let timer = 0;
+        let winS = utils.win('scrollTop');
+        let speed = winS/duration
+        box.timer = setInterval(()=>{
+            timer+=20;
+            if (timer>=duration){
+                clearInterval(box.timer);
+                utils.win('scrollTop',0);
+                return;
+            }
+            utils.win('scrollTop',winS-(timer*speed));
+        },17)
+    }
+
+
+</script>

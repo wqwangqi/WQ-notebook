@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 解构赋值：根据等号两边的数据结构，进行解析并且获取其中的内容
+    * 常用的解构赋值一般用来操作数组和对象
+    * */
+    //1.字符串的结构赋值，我们用的比较少
+    let [a,b,c,d,...e] = 'zhufeng';
+    console.log(a, b, c, d, e);  //z h u f ["e", "n", "g"]
+    let {length} = 'zhufeng';
+    console.log(length);   //7
+
+    //2.数组的结构赋值
+    //var ary = [4,5,6,7]
+
+    var ary=[4,[5,{name:'zf'}],8];
+    let[,[q,{name:w}],]=ary;
+    console.log(q, w);
+    var ary1=[4,5,6,7,8];
+    var [g,...arg]=ary1;
+    console.log(arg);
+
+    //给声明数组的一个默认值
+    var ary = [1,'s'];
+    var [s,f=6] = ary;   //f 是默认值   如果原数组有就输出原数组中的f，如果没有才输出6
+    console.log(s, f);  //1 "s"
+
+    //3.对象的解构赋值
+    let obj = {name:'zf',age:8};
+    let {aa,bb} = obj;
+    console.log(aa, bb); //undefined undefined
+
+    let obj1 = {name:'zf',age:8};
+    let {name,age} = obj1;
+    console.log(name, age); //zf 8
+
+    let obj2 = {name:'zf',age:[2,1,3,5,6,8]};
+    let {age:[,,,,ff,]} = obj2;
+    console.log(ff);
+
+    let {...aaa} = obj2;  //可以实现对象克隆
+    console.log(aaa);  //{name: "zf", age: Array(6)}
+    let bbb = Object.assign({},obj2);   //也可以实现对象的克隆
+    console.log(bbb);
+    console.log(bbb===obj2);  //false
+    let ddd = JSON.parse(JSON.stringify(obj2));  //也可以实现克隆
+    console.log(ddd);
+
+    //通过等号给对象添加默认值
+    obj.say = 'hehehe';
+    let {say='hehe'} = obj;
+    console.log(say);
+
+    //通过冒号给对象起一个别名
+    let name1 = 'CHINA';
+    let {name1:NAME} = obj;
+    console.log(NAME);  //undefined
+
+    //4.函数中的解构赋值，通过函数执行，我们可以设置形参给默认值，或者起一个别名
+    function fn(...arg) {
+        console.log(arg[0]);  //[1, 2, 3, 5]
+        console.log(arg[1]);  // [1, 2, 5, 8, 7]
+    }
+    fn([1,2,3,5],[1,2,5,8,7])
+</script>

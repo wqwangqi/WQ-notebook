@@ -1,0 +1,30 @@
+/*#box{
+  width: 100px;
+  height: 100px;
+  background: green;
+  p{
+    font-size: 30px;
+
+  }
+}*/
+
+/*
+  less中的变量是@符号,存储值和代表值的
+  less中声明的变量，在作用域下有变量提升的效果
+*/
+@color:red;
+@img:'../img';
+@width:100px;
+@height:100px;
+#box{
+  color:@color;
+  background:url('@{img}/123.jpg') no-repeat;
+  width: @width;
+  height: @height;
+
+  p{
+    @color:blue;
+    color: @color;
+  }
+
+}

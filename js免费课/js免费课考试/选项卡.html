@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 300px;
+            height: 500px;
+            background: grey;
+            margin: 100px auto;
+            border: 2px solid pink;
+
+        }
+        #box ul{
+            width: 300px;
+            height: 100px;
+            cursor: pointer;
+
+        }
+        #box ul li:after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        #box ul li {
+            font-size: 25px;
+            width: 100px;
+            height: 100px;
+            list-style: none;
+            float: left;
+            background: yellow;
+            line-height: 100px;
+            text-align: center;
+            border-right: 2px dashed lightblue;
+            box-sizing: border-box;
+        }
+        #box ul li:nth-child(3){
+            border-right: none;
+        }
+        #box div{
+            font-size: 20px;
+            width: 300px;
+            height: 400px;
+            color: white;
+            line-height: 400px;
+            text-align: center;
+            background: darkmagenta;
+            display: none;
+        }
+        #box ul li.active{
+            background: blue;
+        }
+        #box div.active{
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <ul>
+        <li class="active">湖人</li>
+        <li>勇士</li>
+        <li>火箭</li>
+    </ul>
+    <div class="active">詹姆斯</div>
+    <div>库里</div>
+    <div>哈登</div>
+
+
+</div>
+
+</body>
+</html>
+
+<script>
+    var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var contents = box.getElementsByTagName('div');
+    for(var i =0;i<lis.length ;i++){
+        lis[i].index = i;
+        lis[i].onclick = function () {
+            for(var j =0;j<lis.length;j++){
+                lis[j].className = '';
+                contents[j].className = '';
+            }
+            this.className = 'active';
+            contents[this.index].className = 'active';
+        }
+    }
+
+
+
+
+</script>

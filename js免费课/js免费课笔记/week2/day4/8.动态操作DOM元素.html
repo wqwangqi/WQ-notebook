@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">div1
+    <a href="###" id="a1">珠峰培训 <em>zhufeng</em></a>
+</div>
+</body>
+</html>
+<script>
+    /*
+    * 1.创建元素节点 document.createElement("div")
+    * 2.创建文本节点 document.createTextNode("aaa");
+    * 3.添加节点  父节点.appendChild(ele);
+    * 4.插入到某个节点之前 父节点.insertBefore(newEle,oldEle);
+    * 5.替换节点  父节点.replaceChild(newEle,oldEle);
+    * 6.删除节点 父节点.removeChild(ele);
+    * 7.克隆节点 ele.cloneNode(true) 深度克隆 把子子孙孙都克隆下来
+    * 8.设置属性 ele.setAttribute(attr,value);
+    * 9.获取属性 ele.getAttribute(attr);
+    * */
+
+    //创建p标签，内容是aaa,添加到div1标签
+   var oP = document.createElement("p");
+   //oP.innerHTML = "aaa";
+   var oText = document.createTextNode("aaaa");
+   oP.appendChild(oText);
+
+   var oDiv1 = document.getElementById("div1");
+   var oA = document.getElementById("a1");
+   // oDiv1.appendChild(oP);
+   // oDiv1.insertBefore(oP,oA);//p标签插入到a标签之前
+   // oDiv1.replaceChild(oP,oA); //p标签替换a标签
+   // oDiv1.removeChild(oA);   删除A标签
+   //var newA = oA.cloneNode(true);
+   //document.body.appendChild(newA); //把克隆的A标签添加到body中
+     oDiv1.zhufeng = "peixun";
+    //console.log(oDiv1.zhufeng);
+    //oDiv1.setAttribute("zhufeng","peixun");
+    console.log(oDiv1.getAttribute("zhufeng")); //获取属性值
+
+
+
+</script>

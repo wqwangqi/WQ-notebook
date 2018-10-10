@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //对象  类  实例
+    //对象：万物皆对象
+    //类：对象中细分的类型
+    //实例：每类中具体的事物（实实在在的东西)  例如：每一个人都是人类中的实例
+
+    //1.了解js内置类的特征，属性和方法
+    //Number   String  Boolean  Null  Undefined  Object  Array   Regexp  Date...
+    //Object类是所有的类的基类 ，其他类是Object是派生类
+    //2.自己可以自定义类，并给这个类添加想要的功能
+    //var num = 10; //实例   Number类的实例
+    //new Number(10)  => {10} => 调用valueOf() 变成基本类型的数据
+    // Number  String  Boolean  包装类
+
+    //var num = new Array(10)  //=>[empty*10]  每一项是undefined
+    //var num = new Array('10')  //=>['10']
+    //var num = new Array(10,20)  //=>[10,20]    构造函数的写法
+    //var num = [10,20]   //=> 字面量
+
+    //构造函数模式 ，自定义类Person
+    //es5类叫构造函数，es6中叫类  class，其他语言叫类  class
+    //1.批量生产2.识别功能  返回对象都是属于Person类的实例
+    //缺点：所有的属性都是各个实例的，实例相关之间没有关联，没法实现功能共享问题
+    function Person(name,age) {//首字母大写  目的是为了跟普通函数区别开
+        //1.创建对象（系统自己创建）
+        //2.给对象添加功能
+        this.name = name;  //this表示创建的对象
+        this.age = age;
+        this.writeCss = function () {console.log('writeCss')}
+        this.writeJs = function () {console.log('writeJs')}
+
+        //3.返回对象（系统自己做）
+    }
+    //Person()   //普通函数   不是构造函数
+    var P1 = new Person('郭家祥',60)  //通过new运行的函数叫构造函数   用P1表示返回的this
+    console.log(P1);
+    //细节知识点
+    //1.new Person() //匿名实例     var p1 = new Person()    p1实例
+    //2.构造函数后的小括号，当不需要传参是可以不写  new Person
+    //3.在构造函数不要写return，若非得写return
+         // =>基本数据类型   没影响
+         //=> 引用数据类型   ，则会覆盖系统返回的值
+    //4.this.xxx  属性是实例的属性    var a =10；这种不是通过this.xxx设置的属性与实例无关
+</script>

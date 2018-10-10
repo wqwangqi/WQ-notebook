@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 1.css
+    * transition
+    * transform
+    * animate
+    *
+    * 2.js
+    * 定时器
+    * canvas
+    * 帧动画
+    *
+    * 3.flash
+    *
+    * 匀速直线运动的公式
+    * time/duration*change+begin
+    *
+    * let const
+    * 模板字符串
+    *
+    * 数组、字符串和对象的一些方法
+    * 箭头函数的特点：
+    *   1.this
+    *   2.arguments
+    *   3.如果形参只有一个的话，可以不写小括号
+    *   4.箭头函数没有构造函数
+    * 解构赋值：等号两边的数据结构进行解析，获取两边的内容
+    * 常用的解构赋值一般用来操作数组和对象
+    * 对象的解构赋值：
+    * let {name} = {name:'zf'};
+    * let {name='CHINA'} = {name:'zf'};  //等号是给默认值的
+    * let {name：CHINA} = {name:'zf'};  //CHINA  => 'zf'   冒号是起一个别名
+    * 数组的解构赋值：   结构必须是一一对应的
+    * let [a] = [1,2,3];   //a =>1
+    * let [,,a] = [1,2,3];   //a =>3
+    * let [,...a] = [1,2,3];  //a => [2,3]
+    * 解构赋值，既可以拿到私有属性，也可以拿到公有属性
+    *
+    * 函数的解构赋值
+    *
+    * 普通函数中的this，this是看到当前函数执行的时候前面是否有点，点前面是谁，this就是谁，call方法可以强制改变this
+    * 箭头函数中没有this，this是当前箭头函数所在作用域的上下文【环境】，跟在哪里执行没有关系，跟在那里定义有关系
+    * */
+    function fn([a,b,c]){
+        console.log(a,b,c)   // x y z
+    }
+    fn(['x','y','z'])
+
+    function fn1({name:logo,add = 'street'}){
+        console.log(logo, add);  // logo => 'zf'  add = >  'street'
+    }
+    fn1({name:'zf',age:'9'});
+
+
+
+
+    //es6提供的一个类 promise
+    //Promise 中三个状态，一个是初始化成功pending  开始执行Promise中的异步代码，成功的函数  => resolve()
+    //失败的函数  =>  reject()
+    //Promise 本身是同步执行代码，它里面可以放异步的代码
+    //Promise 它返回的一个实例，可以调用Promise类上面的then方法
+
+    //then方法：Promise类当中成功或者失败执行的方法，它只能通过实例进行调用
+    //then方法执行，中有两个参数，分别是成功后执行的函数，和失败后执行的函数
+
+    //在Promise当中只能是被一种状态，只要遇到成功态或者失败态，就会结束，把第一次找到的状态，让相对应的函数执行，这个属于Promise机制
+
+    let f1 = (resolve,reject)=>{
+        console.log(1);
+        resolve()
+    }
+    var f = new Promise(f1);
+    f.then(()=>{
+        console.log(3);
+    },()=>{
+        console.log(4);
+    })
+
+
+
+</script>

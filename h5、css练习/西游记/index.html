@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{margin: 0;
+        padding: 0;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    .photo{
+        background: url("img/pic.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+
+
+    }
+    .pic{
+        position: absolute;
+        left: 350px;
+        top: 300px;
+
+    }
+    .pic div{
+        float: left;
+
+
+    }
+    .pic .monkey{
+        background: url("img/west_01_3ca39fe.png") no-repeat;
+        width: 200px;
+        height: 180px;
+        animation: monkey .8s steps(8) infinite;
+
+
+    }
+    .pic .pig{
+        background: url("img/west_02_47bad19.png") no-repeat;
+        width: 200px;
+        height: 180px;
+        animation: pig .8s steps(8) infinite;
+    }
+    .pic .monk{
+        background: url("img/west_03_f962447.png") no-repeat;
+        width: 170px;
+        height: 240px;
+        animation: monk .8s steps(8) infinite;
+
+
+
+    }
+    .pic .sand{
+        background: url("img/west_04_6516d80.png") no-repeat;
+        width: 210px;
+        height: 200px;
+        animation: sand .8s steps(8) infinite;
+
+    }
+    @keyframes monkey {
+        0%{ background-position: 0 0;}
+        100%{ background-position: -1600px 0;}
+
+    }
+    @keyframes pig {
+        0%{ background-position: 0 0;}
+        100%{ background-position: -1600px 0;}
+
+    }
+    @keyframes monk {
+        0%{ background-position: 0 0;}
+        100%{ background-position: -1360px 0;}
+
+    }
+    @keyframes sand {
+        0%{ background-position: 0 0;}
+        100%{ background-position: -1680px 0;}
+
+    }
+
+
+</style>
+
+
+
+<div class="photo"></div>
+<div class="pic">
+    <div class="monkey"></div>
+    <div class="pig"></div>
+    <div class="monk"></div>
+    <div class="sand"></div>
+
+</div>
+
+
+
+
+
+</body>
+</html>

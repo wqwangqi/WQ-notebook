@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*( function( global, factory ) {
+
+// Pass this if window is not defined yet
+    } )( typeof window !== "undefined" ? window : this, function( window, noGlobal ) {
+        return typeof obj === "function" && typeof obj.nodeType !== "number";
+    });*/
+
+    //自执行函数
+   /* var name = "lucy";
+    var age = 20;
+    ~(function(name,age){//形参
+        var name = name;
+        var age = age;
+        console.log(name,age);
+        //window.xx = name;
+    })(name,age)*///实参
+    //console.log(xx);
+
+    //闭包返回对象  -- 高级单例模式
+    //解决闭包里内容共享问题
+    var utils = function(){
+          var name = "111";
+          function fn(){console.log("fn")}
+          function sum(){console.log("sum")}
+          return {
+              sum:sum
+          }
+    }()
+    utils.sum();
+    //utils.fn();
+
+</script>

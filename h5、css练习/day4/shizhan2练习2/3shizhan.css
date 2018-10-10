@@ -1,0 +1,42 @@
+.content{
+    background-color: darkgrey;
+    width: 800px;
+    margin: 0 auto;
+
+}
+.content h3{
+   font-size: 30px;
+   line-height: 30px;
+    text-align: center;
+    font-weight: 100;
+}
+.content p{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+}
+.content .list{
+    background-color: yellow;
+    font-size: 0px;
+
+
+
+}
+.content .list .inf{
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+
+
+}
+.content .list .inf h5{
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+
+}
+.content .list .inf p{
+    text-indent: 2em;
+    font-size: 13px;
+}

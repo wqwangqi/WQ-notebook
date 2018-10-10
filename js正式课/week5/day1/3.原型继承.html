@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 原型继承
+    * 子类的公有继承父类的私有+公有属性
+    * */
+    function Parent() {
+        this.name = 'zf';
+    }
+    Parent.prototype.getX = function () {
+        return this.name
+    };
+    function Child() {
+        this.age = 8;
+    }
+    Child.prototype.getY = function () {
+        return this.age
+    };
+    //父类的私有+公有属性  => 只有父类的实例才会拥有
+    //子类的公有 => 子类的原型属性  => 子类的公有位置
+    Child.prototype = new Parent();
+    // new Parent()  //{name:'zf'}
+    // Child.prototype = {name:'zf'}
+    //这样做会导致子类的原型上的constructor丢失
+    new Child().__proto__.name == new Parent().name
+
+
+
+
+    /*
+    * 通过这种方式，子类的实例就可以调用父类的私有属性和公有属性
+    * 注意：我们要给子类的原型上扩展公共方法，必须等到继承之后，再给添加才能生效
+    * 弊端：我们给父类的私有大户型添加多少，子类的公有属性就会拥有多少，最好的方法是子类的私有拥有父类的私有，子类的公有拥有的父类的公有，所以我们需要学习寄生组合继承
+    *
+    * */
+</script>

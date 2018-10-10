@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 冒泡排序
+    *
+    *
+    *
+    *
+    * */
+    var ary = [4,90,5,12,0,6];
+    //
+for (var j=0;j<ary.length-1;j++){
+    //小循环会依次递减   我们让条件再减去大循环的索引即可
+    //
+    for(var i =0;i<ary.length-1-j;i++){
+        if (ary[i] > ary[i+1]){
+            var cur = null;
+            cur = ary[i];
+            ary[i] = ary[i+1];
+            ary[i+1] = cur;
+        }
+    }
+}
+    console.log(ary);
+
+</script>

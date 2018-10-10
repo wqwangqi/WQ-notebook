@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    var ary = [4,90,5,12,0,6];
+
+    function quickSort(ary) {
+        if (ary.length<=1){
+            return ary
+        }
+        //取中间的一个索引
+        var midIndex = Math.floor(ary.length/2);
+        //通过索引找到中间值  截取中间值
+        var mid = ary.splice(midIndex,1);
+        //创建左右手
+        var left = [],right = [];
+        //让数组中的每一项都和中间值进行比较
+        for (var i =0;i<ary.length;i++){
+            //如果当前项比中间值小的话，放在左手边；如果大的话，放在右手边；
+            if(ary[i]<mid){
+                left.push(ary[i]);
+            }else{
+                right.push(ary[i]);
+            }
+        }
+
+     //函数调用函数就是递归
+     return quickSort(left).concat(mid,quickSort(right))
+    }
+    console.log(quickSort(ary));
+
+
+
+</script>

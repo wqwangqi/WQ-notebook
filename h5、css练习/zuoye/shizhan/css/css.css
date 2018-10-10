@@ -1,0 +1,85 @@
+li{
+    list-style: none;
+}
+.main{
+    width: 1204px;
+    margin: 0 auto;
+}
+.content .logo{
+    width: 252px;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(2,2,2,.27);
+}
+.content h4{
+    font-size: 16px;
+    color: #2d2d2d;
+
+    line-height: 35px;
+
+}
+.content .logo{
+    float: left;
+    width: 252px;
+    /*height: 185px;*/
+    margin-left: 65px;
+    margin-top: 15px;
+}
+.content .quchu{
+    margin-left: 0;
+
+}
+.content .wz{
+    width: 253px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding: 0 0 0 16px;
+    /*transition: all 0.3s;*/
+
+
+}
+.content .wz h5{
+    font-size: 15px;
+    color: #1e1e1e;
+    line-height: 28px;
+}
+.content .wz p{
+    font-size: 12px;
+    color: #9e9d9d;
+    display: none;
+    line-height: 14px;
+
+}
+.content .wz:hover p{
+    display: block;
+}
+.content .wz .big{
+    float: left;
+    font-size: 12px;
+    color: #c71b1b;
+}
+.content .wz .min{
+    float: right;
+    font-size: 12px;
+    color: #868484;
+    padding-right: 30px;
+}
+.content .wz span{
+    height: 40px;
+    line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+

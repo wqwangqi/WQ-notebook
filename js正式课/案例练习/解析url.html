@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var str = 'https://www.baidu.com/s?wd=d&rsv_spt=1&rsv_iqid=0xca35055f0001c8bf&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=0&rsv_sug3=3&rsv_sug1=1&rsv_sug7=100&inputT=1189&rsv_sug4=2477';
+    //split
+    //console.log(str);
+    var newStr = str.split('?')[1];
+    var reg = /[=&]/g;
+    newStr = newStr.split(reg);
+    var obj = {};
+    for (var i = 0; i <newStr.length ; i++) {
+        obj[newStr[i]] = newStr[i+1]
+    }
+    console.log(obj);
+
+    //match
+    var reg = /([\w-]+)=([\w-]+)/g;
+    var newStr = str.match(reg)
+    //console.log(newStr);
+    var obj = {}
+    for (var i = 0; i < newStr.length; i++) {
+        obj[newStr[i].split('=')[0]]=newStr[i].split('=')[1]
+    }
+    console.log(obj);
+    console.log(Object.keys(obj).length);
+
+</script>

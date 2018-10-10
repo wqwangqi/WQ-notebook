@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #box{
+            width: 100%;
+            height: 100%;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+<div style="background: black" id="box"></div>
+
+
+
+
+
+
+</body>
+</html>
+<!--
+<script>
+    /*var box = document.getElementsById('box')
+    var bg = box.style.background;
+    box.onclick = function () {
+bg = box.style.background;
+
+    if (bg == 'black'){
+        bg.style.background = 'red'
+    }
+    else if (bg == 'red'){
+
+    }
+
+    }*/
+
+    var box = document.getElementById('box');
+    var bg = box.style.background; // 'black'
+    box.onclick = function () {
+
+        if(bg == 'black'){
+            bg = 'red'
+        }else if(bg == 'red'){
+            bg = 'green'
+        }else if(bg == 'green' ){
+            bg= 'yellow'
+        }else if(bg == 'yellow'){
+            bg= 'white'
+        }else if(bg == 'white' ){
+            bg= 'black'
+        }
+        box.style.background = bg
+    }
+
+
+
+
+</script>-->
+<script>
+    var div = document.getElementById('box')
+    var bg = box.style.background;
+    box.onclick = function () {
+        if(bg == 'black'){
+            bg = 'red'
+        }else if (bg == 'red'){
+            bg = 'yellow'
+        }else if (bg == 'yellow'){
+            bg = 'green'
+        }else if (bg == 'green'){
+            bg = 'pink'
+        }else if (bg == 'pink'){
+            bg = 'grey'
+        }else if (bg == 'grey'){
+            bg = 'black'
+        }
+
+        box.style.background = bg
+    }
+
+</script>

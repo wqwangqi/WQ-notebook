@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    /*
+    * 什么是回调函数？   将一个普通函数b，当做参数传给函数a的时候，当a执行的时候，顺便把b也执行了，这种机制就叫做回调函数;
+    * */
+
+    function a(b) {
+        b()
+    }
+
+    function b() {
+
+    }
+
+    a(b)
+
+    /*
+    * 常用的回调函数：
+    * forEach(function(){})
+    * map
+    * setTimeout
+    * setInterval
+    * sort
+    * $.each()
+    * ...
+    * */
+
+    //打字机
+    var str = `9月13日凌晨1点，苹果将于Apple Park内的乔布斯剧院发布新iPhone系列。虽然还有不到一周时间，但新iPhone的命名貌似已经被确认下来，而且还长的惊人！`;
+    var str2 = '敬请期待';
+    //
+    function interval(ele,time,str,callback) {
+        var step = 0;
+        ele.timer = setInterval(function () {
+            box.innerHTML += str[step++];
+            if (step >= str.length) {
+                clearInterval(ele.timer);
+                callback&&callback.call(ele)   //验证有没有回调函数   如果有则执行
+            }
+        }, time)
+    }
+
+    interval(box,200,str,function () {
+        //this.innerHTML+='敬请期待'
+        interval(box,1000,str2)
+    })
+</script>

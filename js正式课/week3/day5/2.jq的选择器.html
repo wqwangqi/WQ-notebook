@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <p>1</p>
+</div>
+<div id="box2">
+    <p>2</p>
+</div>
+<div class="bb">
+    <p>3</p>
+</div>
+</body>
+</html>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script>
+    /*
+    * jq中的选择器
+    * 共有两个参数
+    * 第一个参数：选择的那个值【选择的对象】
+    * 第二个参数：当前选择元素的上下文【默认不写是document】
+    * 参数1有三种情况
+    * 1.当参数是字符串的时候，属于选择当前的这个元素，返回一个jq的对象
+    * 2.当参数是元素对象，会转化成jq对象[方便调用jq上的方法]
+    * 3.当参数是一个函数的时候，表示整个页面文档全部加载过后在执行，和$（document）.ready（）这个方法是一样的
+    *
+    *
+    *
+    *
+    * */
+    //根据上下文的不同，选择不同的标签
+    console.log($('p',box));
+    console.log($('p',box2));
+    console.log($('.bb'));
+
+
+
+
+
+</script>

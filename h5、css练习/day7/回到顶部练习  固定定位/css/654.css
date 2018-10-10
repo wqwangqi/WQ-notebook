@@ -1,0 +1,84 @@
+
+.dd{
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+}
+.ff{
+    width: 100%;
+    height: 200px;
+    background-color: green;
+}
+.gg{
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+}
+.hh{
+    width: 100%;
+    height: 200px;
+    background-color: red;
+}
+.jj{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+.kk{
+    width: 100%;
+    height: 200px;
+    background-color: pink;
+}
+.ll{
+    width: 100%;
+    height: 200px;
+    background-color: goldenrod;
+}
+.oo{
+    width: 100%;
+    height: 200px;
+    background-color: lightseagreen;
+}
+.pp{
+    width: 100%;
+    height: 200px;
+    background-color: sienna;
+}
+a{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+}
+
+.uuu{
+    width: 33px;
+    height: 35px;
+    background: url("../img/576.png") no-repeat;
+    position: fixed;
+    right: 0px;
+    top: 250px;
+}
+.uuu span{
+    display: none;
+    font-size: 15px;
+    line-height: 100px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin-left: -100px;
+}
+.uuu:hover span{
+    display: inline-block;
+
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>
+<script src="js/zepto.js"></script>
+<script>
+    /*
+    * 单指事件：touchstart   touchmove  touchend
+    * 点击事件：click  300ms延迟的问题
+    * 复合事件：swipeLeft  swipeRight  swipe  swipeUp  swipeDown  singleTap
+    * zepto：用法跟JQ一样，但是是移动端常用的js库
+    * */
+
+    $("#div1").swipeRight(function () {
+       /* $(this).css({
+            "transform": "rotate(45deg)",
+            "transition": "1s"
+        })*/
+       $(this).animate({
+           opacity:0.25,
+           translate3d:'100px,0,0'
+       },500,function () {
+           $(this).css({
+               "transform": "rotate(45deg)",
+               "transition": "1s"
+           })
+       })
+    })()
+</script>

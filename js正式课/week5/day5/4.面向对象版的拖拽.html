@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            cursor: move;
+            font-size: 30px;
+            color: rgba(0,0,0,.5);
+            line-height: 100px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
+<script src="3.event.js"></script>
+<script>
+    /*
+    * 构造函数+原型
+    * */
+    class Drag {
+        constructor(ele){
+            //this指的是实例
+            this.ele = ele;
+            this.ele.addEventListener('mousedown',this.down.bind(this),false);
+        }
+        down(e){
+            e.preventDefault();
+            this.x = this.ele.offsetLeft;
+            this.y = this.ele.offsetTop;
+            this.mx = e.clientX;
+            this.my = e.clientY;
+            this.MOVE = this.move.bind(this);
+            this.UP = this.up.bind(this);
+            document.addEventListener('mousemove',this.MOVE,false);
+            document.addEventListener('mouseup',this.UP,false);
+            fire.call(this.ele,'dragStart',e);  //把绑定在dragStart这件事情上的行为给执行
+        }
+        move(e){
+            this.ele.style.left = this.x+(e.clientX-this.mx)+'px';
+            this.ele.style.top = this.y+(e.clientY-this.my)+'px';
+            fire.call(this.ele,'dragMove',e); //把绑定在dragMove这件事情上的行为给执行
+        }
+        up(e){
+            document.removeEventListener('mousemove',this.MOVE,false);
+            document.removeEventListener('mouseup',this.UP,false);
+            fire.call(this.ele,'dragUp',e);  //把绑定在dragUp这件事情上的行为给执行
+
+        }
+    }
+    //低耦合  高内聚
+    var index=0;
+    function increase() {  //按下时
+        this.style.zIndex=++index;
+        this.style.background=`rgba(${Math.round(Math.random()*255)},${Math.round(Math.random()*255)},${Math.round(Math.random()*255)},${Math.random()})`
+    }
+    function backColor() { //松开时
+        this.style.border='5px deshed yellow'
+    }
+
+
+    let oDivs = document.querySelectorAll('div');
+    for (let i = 0; i <oDivs.length ; i++) {
+        let oDiv = oDivs[i];
+        new Drag(oDiv);
+        on(oDiv,'dragStart',increase);
+        on(oDiv,'dragUp',backColor);
+
+    }
+
+</script>

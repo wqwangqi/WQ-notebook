@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="box">
+    <!--haha-->
+    <div>en </div>
+    <!--zhege-->
+    好吧我的文字
+    <p>我是p标签</p>
+    <!--    -->
+
+</div>
+
+
+
+</body>
+</html>
+
+<script>
+    //找到box元素下的所有元素节点
+
+
+    var box = document.getElementById('box');
+
+
+    var child = box.childNodes;
+    console.log(child);
+
+    var newAry = [];
+    for (var i=0;i<child.length;i++){
+        var cur = child[i];
+        if (cur.nodeType===1){
+            newAry.push(cur)
+        }
+    }
+    //console.dir(cur);
+
+
+    //找到p标签上一个元素节点，将它打印出来
+
+    var p = document.getElementsByTagName('p')[0];
+
+    //我们要在p标签上找一个元素节点，要不断的向上一个各个节点确认，如果不是元素节点，继续向上一级找，知道找到元素节点
+    //我们要便利循环所有的哥哥节点；在所有的哥哥节点中找元素节点
+    //while  => 不知道循环多少次可以使用这个循环
+    var prev = p.previousSibling;
+    // 判断上一个哥哥节点是否是一个元素节点
+    while (prev.nodeType!==1){ //如果不是元素节点，就再往上一级继续查找
+        prev = prev.previousSibling;   //查找的过程中，我们需要把这个哥哥变量重新赋值为哥哥节点的上一个哥哥节点，以此进行循环，直到它的上一个哥哥节点为元素节点，才会循环结束
+
+}
+/*prev = prev.nodeType==1?prev:null;*/
+    console.log(prev);
+    //console.dir(prev);
+
+
+</script>

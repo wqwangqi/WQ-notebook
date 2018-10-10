@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+    var ary = [1,0,3,6,56,96,88,55,2];
+    for(var i =0;i<ary.length-1 ;i++){
+        for(var j =0;j<ary.length-1-i ;j++){
+            if(ary[j]>ary[j+1]){
+                var cur = null;
+                cur = ary[j];
+                ary[j] = ary[j+1];
+                ary[j+1] = cur;
+            }
+        }
+    }
+    console.log(ary);
+</script>

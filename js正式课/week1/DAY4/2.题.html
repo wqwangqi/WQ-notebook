@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var n=13;
+    function fn(){
+        alert(n);
+        n=14;//私有作用域下，不带var的n得先判断下是否是私有的变量
+        alert(n);
+    }
+    fn();
+    alert(n);
+
+
+    //在全局作用域下 var n = 13 和 m = 13的区别
+    //带var关键字有变量提升，不带var的没有
+    //不管是否带var都是window的属性
+
+    //var n = 13;
+    //m = 13;
+    //上面两行相当于下面一行代码
+    //var n = m = 13;
+
+</script>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            -webkit-user-select: none;
+            cursor: move;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
+<script src="3.event.js"></script>
+
+<script>
+    class Drag {
+        constructor(ele) {
+            //this指的是实例
+            this.ele = ele;
+            this.ele.addEventListener('mousedown', this.down.bind(this), false);
+        }
+
+        down(e) {
+            e.preventDefault();
+            this.x = this.ele.offsetLeft;
+            this.y = this.ele.offsetTop;
+            this.mx = e.clientX;
+            this.my = e.clientY;
+            this.MOVE = this.move.bind(this);
+            this.UP = this.up.bind(this);
+            document.addEventListener('mousemove', this.MOVE, false);
+            document.addEventListener('mouseup', this.UP, false);
+            fire.call(this.ele, 'dragStart', e);  //把绑定在dragStart这件事情上的行为给执行
+        }
+
+        move(e) {
+            this.ele.style.left = this.x + (e.clientX - this.mx) + 'px';
+            this.ele.style.top = this.y + (e.clientY - this.my) + 'px';
+            fire.call(this.ele, 'dragMove', e); //把绑定在dragMove这件事情上的行为给执行
+        }
+
+        up(e) {
+            document.removeEventListener('mousemove', this.MOVE, false);
+            document.removeEventListener('mouseup', this.UP, false);
+            fire.call(this.ele, 'dragUp', e);  //把绑定在dragUp这件事情上的行为给执行
+
+        }
+    }
+
+    function getSpeed(e) {
+        if (!this.prevX) {//在if语句中操作，若没有值，赋一个初始值
+            this.prevX = this.mx;
+        }
+        this.speedX = e.clientX - this.prevX;
+        this.prevX = e.clientX;
+    }
+
+    function fly() {
+        //摩擦力...
+        clearTimeout(this.timer);
+        this.speedX *= 0.98;
+        //console.log(this.speedX);
+        //处理边界
+        var rSide = (document.documentElement.clientWidth || document.body.clientWidth) - this.offsetWidth;
+        var lSide = 0;
+        var duration = this.offsetLeft + this.speedX;
+        if (duration >= rSide) {
+            duration = rSide;
+            this.speedX *= -1;//碰到边界之后往相反的方向运行
+        } else if (duration <= 0) {
+            duration = 0;
+            this.speedX *= -1;
+        }
+        //小球的位置=现在的位置+速度；
+        this.style.left = duration + 'px';
+        if (Math.abs(this.speedX) > 0.5) {//动画停止后，不在开启定时器
+            this.timer = window.setTimeout(() => {
+                fly.call(this)
+            }, 30)
+        }
+
+
+        //事件
+        //定时器积累
+        //this关键字
+        //动画边界，动画停止的条件
+    }
+
+    let g = 9.8;
+    let flag = 0;
+
+    function drop() {
+        clearTimeout(this.droptimer);
+        if (!this.dropSpeed) {
+            this.dropSpeed = 0
+        }
+        this.dropSpeed += g;
+        this.dropSpeed *= 0.98;
+        var tSide = (document.documentElement.clientHeight || document.body.clientHeight) - this.offsetHeight;
+        var duration = this.offsetTop + this.dropSpeed;
+        if (duration >= tSide) {
+            this.style.top = tSide + 'px';
+            this.dropSpeed *= -1;
+            flag++;//连续两次走到这里，就说明小球停下来
+        } else {
+            this.style.top = duration + 'px';
+            flag = 0
+        }
+
+        //this.style.top=this.offsetTop+this.dropSpeed+'px';
+        if (flag < 2) {
+            this.droptimer = window.setTimeout(() => {
+                drop.call(this)
+            }, 30)
+        }
+
+    }
+
+    let index = 0
+
+    function increase() {  //按下时
+        this.style.zIndex = ++index;
+        this.style.background = `rgba(${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)})`
+    }
+
+    let divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        let Div = divs[i];
+        new Drag(Div);
+        on(Div, 'dragMove', getSpeed);
+        on(Div, 'dragUp', fly);
+        on(Div, 'dragUp', drop);
+        on(Div, 'dragStart', increase)
+    }
+
+</script>

@@ -1,0 +1,142 @@
+html{
+    font-size: 50px;
+}
+header{
+    background-color: #252525;
+    height: 1.09rem;
+    width: 100%;
+    position: relative;
+}
+header span{
+    background: url("../img/jiantou-1.png") no-repeat;
+    width: .35rem;
+    height: .35rem;
+    background-size: .38rem .39rem;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: .35rem 0 .35rem .23rem;
+
+
+}
+header h3{
+    font-size: .3rem;
+    color: #ffffff;
+    line-height: .66rem;
+    text-align: center;
+    padding-top: .20rem;
+
+}
+
+i{
+    background: url("../img/pen.png") no-repeat;
+    width: 1.18rem;
+    height: 1.17rem;
+    display: block;
+    background-size: 1.19rem 1.18rem;
+    margin: 1.14rem auto;
+}
+
+.label{
+    position: relative;
+    margin: -.4rem .37rem 0 .37rem;
+}
+.label input{
+    width: 100%;
+    height: .81rem;
+
+    border-radius: .1rem;
+    font-size: .3rem;
+box-shadow: .01rem .01rem .01rem grey,-.01rem -.01rem .01rem grey;
+    border: .01rem solid grey;
+
+
+
+}
+.label input::placeholder{
+    font-size: .3rem;
+    color: grey;
+    padding: .33rem .1rem .33rem .34rem;
+}
+.label .yz a span{
+    font-size: .24rem;
+    color: #188ae4;
+    background-color: #d8edfe;
+    padding: .25rem .55rem .25rem .55rem;
+    border: .01rem solid #188ae4;
+    border-radius: .1rem;
+    margin-right: .1rem;
+
+}
+.label .yz input{
+    float: left;
+    width: 50%;
+    margin-top: .40rem;
+}
+.label .yz a span{
+    float: right;
+    margin-top: .40rem;
+}
+.footer{
+    position: relative;
+    margin-top: .2rem;
+}
+
+.footer .an{
+    float: left;
+    /*margin: .4rem 0 0 .4rem;*/
+    position: absolute;
+    left: .4rem;
+    top: 1.5rem;
+}
+.footer .an input{
+    float: left;
+    border: none;
+    width: .3rem;
+    height: .3rem;
+    margin-right: .21rem;
+    vertical-align: middle;
+
+}
+.footer .an h3{
+    font-size: .24rem;
+    color: #188ae4;
+    float: right;
+    display: block;
+    vertical-align: middle;
+
+}
+
+.zhuce{
+    padding: 0 .38rem 0 .38rem;
+    position: relative;
+    margin-top: .5rem;
+}
+.zhuce a h2{
+    font-size: .3rem;
+    color: #ffffff;
+    background-color: #188ae4;
+    padding: .28rem 2.53rem .28rem 2.53rem;
+    position: absolute;
+    left: .38rem;
+    top: 2rem;
+    border-radius: .07rem;
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 375px){
+    html{
+        font-size: 58.59375px;
+    }
+}
+@media screen and (min-width: 414px){
+    html{
+        font-size: 64.6875px;
+    }
+}

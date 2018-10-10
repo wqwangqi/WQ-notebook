@@ -1,0 +1,7 @@
+/*
+less 中的层级嵌套
+&:表示当前
+*/
+#box:hover {
+  font-size: 50px;
+}

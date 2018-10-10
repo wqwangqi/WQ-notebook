@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>
+<script>
+     //深入理解对象类型的数据
+     //根据需求
+    //第一种
+    var odiv = document.getElementById('div1');
+    odiv.style.width = '100px';
+    //第二种
+    var ostyle = document.getElementById('div1').style;
+    ostyle.width = '200px';
+    //第三种
+    var owidth = document.getElementById('div1').style.width;
+    owidth = '250px';
+</script>

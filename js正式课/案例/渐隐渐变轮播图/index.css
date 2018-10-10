@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.outer{
+    width: 600px;
+    height: 400px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+
+}
+.outer .swiper img{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    display: none;
+}
+.outer .focus{
+    padding: 5px;
+    background: rgba(0,0,0,.5);
+    border-radius: 4px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.focus li{
+    width: 10px;
+    height: 10px;
+    background: purple;
+    border-radius: 50%;
+    margin: 0 5px;
+    float: left;
+}
+.focus li.selected{
+    background: yellow;
+}
+.left,.right{
+    width: 30px;
+    height: 45px;
+    background: url("images/pre.png") no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    border: none;
+    display: none;
+}
+
+.left{
+    left: 0;
+}
+.right{
+    right: 0;
+    background-position: -45px 0;
+}
+
+
+

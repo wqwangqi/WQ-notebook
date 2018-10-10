@@ -1,0 +1,142 @@
+.content{
+    position: relative;
+    width:100%;
+}
+header {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 88px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header .logo {
+    float: left;
+    width: 270px;
+    height: 51px;
+    margin-top: 17px;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+header nav {
+    float: right;
+    line-height: 88px;
+}
+
+header nav a {
+    padding: 0 30px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/*banner*/
+.banner {
+    width: 100%;
+}
+.banner .list{
+    width:100%;
+}
+.banner .list li{
+    width:100%;
+    text-align: center;
+    display: none;
+}
+.banner .list li.active{
+    display: block;
+}
+.banner .list li.bg1{
+    background-color: #fd6a28;
+}
+.banner .list li.bg2{
+    background-color: #22206a;
+}
+
+.banner .l-btn{
+    position: absolute;
+    left:90px;
+    top:50%;
+}
+.banner .r-btn{
+    position: absolute;
+    right:90px;
+    top:50%;
+}
+
+/*ad*/
+.ad li{
+    float: left;
+    width:25%;
+    text-align: center;
+    /*margin-right:80px;*/
+}
+/*
+.ad li.noMargin{
+    margin-right: 0;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 760px) {
+    /*max-width: 760px  小于等于760px*/
+    header {
+        height: 46px;
+    }
+
+    header .logo {
+        width: 148px;
+        height: 28px;
+        margin-top: 9px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+    }
+    .banner .l-btn,.banner .r-btn{
+        display: none;
+    }
+    .banner .list li img{
+        width:100%;
+    }
+    .ad li{
+        width:50%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

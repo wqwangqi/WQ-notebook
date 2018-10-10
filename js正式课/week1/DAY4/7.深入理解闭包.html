@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="第一个按钮">
+    <input type="button" value="第二个按钮">
+    <input type="button" value="第三个按钮">
+    <input type="button" value="第四个按钮">
+    <input type="button" value="第五个按钮">
+</body>
+</html>
+<script>
+    var oInputs = document.getElementsByTagName("input");
+    //点击每个按钮，弹出对应的索引
+    //第一种方案 自定义属性
+    /*for(var i = 0;i<oInputs.length;i++){
+        oInputs[i].zhufeng = i;
+        oInputs[i].onclick = function(){
+            alert(this.zhufeng);
+        }
+    }*/
+    //每次事件驱动函数运行时查找的i都是同一个，指的是全局作用域下i
+    //解决办法：每次遍历时，都产生私有作用域，把对应i存储下，事件驱动函数运行时查找的是自己对应存储的i;
+
+    //第二种方案 闭包
+    /*for(var i = 0;i<oInputs.length;i++){
+        ~(function(i){
+            oInputs[i].onclick = function(){
+                alert(i);
+            }
+        })(i)
+    }*/
+
+
+    //第三种方案  闭包
+    /*for(var i = 0;i<oInputs.length;i++){
+        oInputs[i].onclick = function(i){
+            return function(){
+                alert(i);
+            }
+        }(i)
+    }*/
+    //第四种方案 闭包
+    /*for(var i = 0;i<oInputs.length;i++){
+       changeTab(i);
+    }
+    function changeTab(i){
+        oInputs[i].onclick = function(){
+            alert(i);
+        }
+    }*/
+
+    //es6   定义变量 let   {}表示块级作用域
+   /* for(let i = 0;i<oInputs.length;i++){
+        oInputs[i].onclick = function(){
+            alert(i);
+        }
+    }*/
+    //for循环是会产生一个父级作用域 for循环体内容是一个子作用域
+
+    //let和var的区别
+    //1.let定义的没有变量提升
+    //2.相同作用域下，变量名不能重名
+
+    //const 常量
+    //1.const定义的没有变量提升
+    //2.相同作用域下，变量名不能重名
+    //3.不能重复赋值
+</script>

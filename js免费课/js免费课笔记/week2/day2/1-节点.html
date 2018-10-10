@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <!--我是注释内容-->
+    <p>我是p标签</p>
+    你们好，我是文本
+
+</div>
+
+
+
+</body>
+</html>
+
+
+<script>
+
+   // 节点是dom中的最小的组成部分
+    //节点分为document \ 元素节点 \ 文本节点[换行\文字\空格] \ 注释节点
+
+   // node         nodetype   nodeName     nodeValue(节点值)
+
+    //元素节点         1       大写的标签名     null
+    //文本节点         3         #text       文本内容(包括换行)
+    //注释节点         8         #comment    注释内容
+    //document        9         #document     null
+
+    //一个页面中，根节点(document)，根元素(html)
+
+
+
+    var p = document.getElementsByTagName('p');
+
+    //父级节点  parentNode
+    var parent = p.parentNode;
+    console.log(parent);
+
+    //子级节点   childNodes
+    var child = parent.childNodes;  //box下面的子节点
+    //包括：元素、注释、文本
+    console.log(child);
+    // 存放的是所有的子节点[类数组]
+
+
+    //所有的元素子节点  children   //兼容问题
+    var children = parent.children;  // 元素集合是一个类数组 =>  存放的是所有的元素子节点
+    console.log(children);
+
+
+    //上一个哥哥节点  previousSibling
+    var prev = p.previousSibling;
+    console.log(prev);   //是一个文本节点
+    p.previousElementSibling;  //上一个元素哥哥节点
+
+    //下一个弟弟节点   nextSibling
+    var next = p.nextSibling;
+    console.log(next);
+    p.nextElementSibling;   //下一个元素弟弟节点[兼容问题]
+
+    //firstChild  当前元素下的第一个子节点
+    var frist = parent.firstChild;
+    console.log(frist);
+    //firstElementChild  第一个子元素节点
+
+    //lastChild   当前元素下最后一个子节点
+    var last = parent.lastChild;
+    console.log(last);
+    //lastElementChild   最后一个子元素节点
+
+    /*
+    * parentNode:  父级节点
+    * childNodes: 所有的子节点
+    * children：  所有的元素子节点
+    * prevsibling: 上一个哥哥节点
+    * nextsibling: 下一个弟弟节点
+    * fristChild:  当前元素下的第一个子节点
+    * lastChild:  当前元素下的最后一个子节点
+    *
+    * */
+
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://www.baidu.com" target="_blank">123</a>
+
+<div><a href="#box">跳转input框</a></div>
+
+<div>
+    <input type="text" style="margin: 1000px 0" id="box">
+    <input type="button" value="登录">
+</div>
+
+<div>
+    <form action="http://www.baidu.com">
+        <input type="text" username="wangqi">
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<a href="###">212235</a>
+
+<a href="javascript:;">45648</a>
+</body>
+</html>
+<script>
+    /*
+    * 事件的默认行为
+    * 一些元素天生自带一些事件行为，即使不给元素绑定事件方法，它也同样具有，这种默认的效果就叫做事件的默认行为
+    * 比如：
+    * a标签
+    * 1.href:"http://www.baidu.com"  点击a标签会跳转到相对应的链接
+    * 2.href:"#box"锚点链接 // 点击a标签跳转到相对应的锚点
+    * 
+    * input标签
+    * 默认行为：用户可以进行输入，然后input框将内容保存下来
+    * 
+    * submit按钮
+    * 默认行为：在form表单中，点击submit，会跳转到action所对应的链接中，并且还会将form表单中输入的值，拼接到链接地址当中
+    *
+    * 如果我们只是想让a标签作为一个按钮，不想进行链接跳转，也不想进行锚点链接，我们就需要进行阻止事件的默认行为
+    *
+    * 1.可以在结构上阻止
+    * <a href="javascript:;">跳转input框</a>
+    * //可以在href里面输入javascript:;
+    * javascript:void 0 /null/undefined/;
+    *
+    * 2.可以在事件当中进行阻止
+    * 1).return false //阻止事件的默认行为
+    * 注意：点击在a标签会先执行事件方法，再执行事件的默认行为
+    * 2).还可以通过事件对象中的方法进行阻止 （e.preventDefault()）
+    * */
+
+    baidu.onclick = function (e) {
+        //return false
+        e.preventDefault()  //阻止事件的默认行为
+        //事件对象有兼容问题
+        e.preventDefault?e.preventDefault():e.returnValue = false;
+    }
+
+
+
+    //要求写一个表单验证，最小6位最大13位，只能是数字和字母，通过js来实现，满足此条件后，上下左右删除可以用，其他按钮不能用
+    var box = document.getElementById('box');
+    box.onkeydown = function (e) {
+          if (/^[0-9a-zA-Z]{6,13}$/.test(e.target.value)){
+              if (e.target.value.length>=13){
+                  if (!/^(37|38|39|40|8)$/.test(e.keyCode)){
+                      e.preventDefault?e.preventDefault():e.returnValue = false;
+                  }
+              }
+
+          }
+    }
+</script>

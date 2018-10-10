@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /**
+     *
+     * @param ele 指定的元素
+     * @return  相邻的哥哥元素节点
+     */
+    function getPrev(ele) {
+        var pre = ele.previousSibling;   //若不存在则null
+        while(pre){
+            if(pre.nodeType ===1){  //判断下是否是元素节点
+                return prev
+            }
+            pre = pre.previousSibling;
+        }
+        return pre   //显人品的一行代码
+
+    }
+    var oLi2 = document.getElementById('li2');
+    console.log(getPrev(oLi2));
+
+
+</script>

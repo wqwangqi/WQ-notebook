@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#outer{
+    width: 1000px;
+    height: 300px;
+    margin: 200px auto;
+    overflow: hidden;
+    position: relative;
+}
+#swiper{
+    position: absolute;
+    height: 100%;
+}
+#swiper div{
+    float: left;
+    width: 1000px;
+    height: 300px;
+    background: url("../img/img/default.gif") no-repeat center center;
+}
+#swiper img{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+#focus{
+    padding: 5px;
+    border-radius: 3px;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    bottom : 10px;
+    left: 50%;
+}
+#focus li{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 3px;
+    float: left;
+}
+.left,.right{
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 50px;
+    margin-top: -25px;
+    background: url("../img/img/pre.png") no-repeat;
+    display: none;
+}
+.left{
+    left: 0;
+}
+#focus li.selected{
+    background: red;
+}
+.right{
+    right: 0;
+    background-position: -45px 0;
+}

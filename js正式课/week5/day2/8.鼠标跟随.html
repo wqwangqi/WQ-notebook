@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        #mark {
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,.5);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    var p = document.createElement('p');
+    p.id = 'mark';
+    box.onmouseenter = function () {
+        this.appendChild(p);
+        //当盒子移动的时候，控制mark的left的距离
+        this.onmousemove = function (e) {
+            p.style.left = e.clientX - this.offsetLeft - mark.offsetWidth / 2 + 'px';
+            p.style.top = e.clientY - this.offsetTop - mark.offsetWidth / 2 + 'px';
+        }
+    };
+    box.onmouseleave = function () {
+        this.removeChild(p)
+    }
+
+</script>

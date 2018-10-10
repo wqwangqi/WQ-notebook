@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #box{
+            width: 500px;
+            height: 454px;
+            margin: 1000px auto;
+            background: url("img/loading1.gif") no-repeat center center;
+            background-size: cover;
+
+
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img data-src="img/timg.jpg" alt="James">
+</div>
+</body>
+</html>
+<script src="utils.js"></script>
+<script>
+
+    /*
+    * 延迟加载：又名懒加载，是性能优化中非常重要的一个环节，多用于图片最大的网站和移动端
+    * 延迟加载的过程：当浏览器滑到到当前的图片的时候，我们再准备去请求数据和展示图片，在展示图片的时候，我们先创建一个临时的
+    * 图片去试加载，一旦记载成功，我们将正确的地址返回给真实的标签元素，【如果直接是img图片加载失败的话，页面上会有加载失败的
+    * 裂痕，是非常不友好的】
+    *
+    * */
+    let box = document.getElementById('box');
+    let img = box.getElementsByTagName('img')[0];
+
+    //1.计算滚动条滑到图片位置这一块的距离
+    let winH = utils.win('clientHeight');  //浏览器一屏的高
+    let imgH = box.offsetHeight;  //图片自身的高
+    let imgT = utils.offset(box).top; //图片距离body顶部的距离
+
+    window.onscroll = function () {
+        //只有滚动条不断地触发，才会让scrollTop不断的改变
+        let winT = utils.win('scrollTop'); //注意：我是不断变化的scrollTop
+        if (winH+winT>imgH+imgT){
+            let newImg = document.createElement('img');
+            //创建一个img标签的原因：因为img标签上天生自带src属性，而src属性所对应的属性值必须是图片的路径地址
+            //获取图片上的data-src
+            newImg.src = img.getAttribute('data-src');
+            //让新图片试着加载
+            //onload 当图片加载成功【路径正确】的时候，执行这个方法，我们将加载成功后的地址，给原有的图片
+            newImg.onload=function () {
+                img.src=this.src;
+                img.load=true
+            }
+            newImg.onerror = function () {
+                img.src = 'img/error.jpg'
+            }
+        }
+    }
+
+
+
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+    /*var ary = [1,2,1,2,4,3,2,1,2,3,5];*/
+
+    /*function sortAry(ary) {
+        var newAry = []
+        ary.sort(function (a,b) {
+            return a-b
+        })
+        //console.log(ary);
+        for(var i=0;i<ary.length;i++){
+
+            //方案一
+            /!*if (ary[i]==ary[i+1]){
+                //使用当前和后一项进行对比，如果不相等的话，把不相等的那一项放到新数组中
+
+            }else {
+                newAry.push(ary[i])
+            }*!/
+            //方案二
+            if (ary[i]==ary[i+1]){
+                ary.splice(i,1);
+                i-- //splice 删除数组中的某一项，会形成数组塌陷，导致比较的时候会跳过当前项，我们为了防止数组塌陷，我们使用i--，让循环体再按照原来的值循环一次；
+                //splice会截取出重复的项，剩余的原数组就会形成一个不重复的数组
+            }
+        }
+        //return newAry
+        return  ary
+    }
+    console.log(sortAry(ary));*/
+
+
+    //排序2 indexOf
+   /* function indexAry(ary) {
+        var newAry = [];
+        //循环数组中的每一项
+        for(var i=0;i<ary.length;i++){
+            //通过一个新的空数组去检查每一项是否在这个数组中，如果不在，就添加进去；如果有的话，不用管
+            if (newAry.indexOf(ary[i])==-1){
+                newAry.push(ary[i])
+            }
+        }
+        return newAry
+
+    }
+    console.log(indexAry(ary));*/
+   //方案二
+    /*function indexAry(ary) {
+        var newAry = [];
+        //循环数组中的每一项
+        for(var i=0;i<ary.length;i++){
+
+            if (newAry.includes(ary[i])){
+                newAry.push(ary[i])
+            }
+        }
+        return newAry
+
+    }
+    console.log(indexAry(ary));*/
+ 
+    /*es6去重
+   cosole.log ([...new set(ary)]);*/
+
+var ary =[1,2,1,2,3,2,2,3,1];
+    function replay() {
+    var obj = {}; var cur = [];
+        for (var i=0;i<ary.length;i++){
+            if (obj[cur]!=undefined){
+                obj[cur]++
+            }else {
+                obj[cur]=1;
+            }
+
+        }
+    }
+
+    console.log(replay(ary));
+
+
+</script>

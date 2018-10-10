@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Math.round(Math.random()*(m-n)+n)
+    // 从ary中随机获取不重复的5项，存入新数组newAry中返回
+    var ary = [11,2,3,22,11,2,5,7,9,10,8,6,30,10];
+//    function getNum(arr){
+//        var newAry = [];
+//        for(var i = 0;i<5;i++){
+//            var n = Math.round(Math.random()*(arr.length-1));
+//            var cur = arr[n];//从数组中拿到的随机一项
+//            if(newAry.indexOf(cur)===-1){//newAry中没有cur这一项
+//                newAry.push(cur);
+//            }else{  //若是重复这次机会还得有，再重新取一次，索引不能累加
+//                i--;
+//            }
+//        }
+//        return newAry;
+//
+//    }
+
+    //改成while语句
+    function getNum(arr){
+        var newAry = [];
+        while(newAry.length<5){
+            var n = Math.round(Math.random()*(arr.length-1));
+            var cur = arr[n];//从数组中拿到的随机一项
+            if(newAry.indexOf(cur)===-1){
+                newAry.push(cur);
+            }
+        }
+        return newAry;
+    }
+
+    console.log(getNum(ary));
+</script>

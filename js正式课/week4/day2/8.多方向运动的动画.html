@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background: purple;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script src="utils.js"></script>
+<script>
+    let linear = function (t, d, c, b) {
+        return t / d * c + b
+    };
+    let begin = {
+        width: utils.css(box, 'width'),
+        height: utils.css(box, 'height'),
+        opacity: 1,
+        left: utils.css(box, 'left'),
+        top: utils.css(box, 'top'),
+
+    };
+    let target = {
+        width: 200,
+        height: 300,
+        opacity: 0.4,
+        left: 1720,
+        top: 642,
+    };
+    var change = {}, duration = 2000, timer = 0;
+    for (var key in target) {
+        change[key] = target[key] - begin[key];
+    }
+    box.onclick = function () {
+        this.timer = setInterval(() => {
+            timer += 50;
+            if (timer >= duration) {
+                clearInterval(this.timer);
+                //设置这个盒子直达重点
+                utils.css(this, target);  //{}  =>  setGroupCss
+                return
+            }
+            //change  就是要改变的值
+            for (var key in change) {
+                //通过匀速直线运动，把盒子每一个时间段，要改变的属性都求出来
+                var cur = linear(timer, duration, change[key], begin[key]);
+                utils.css(this, key, cur);
+            }
+        }, 17)
+    }
+
+</script>

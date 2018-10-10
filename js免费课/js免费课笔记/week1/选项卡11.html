@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 300px;
+            height: 600px;
+
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+        #box ul {
+            border-bottom: 1px solid grey;
+            width: 300px;
+            height: 100px;
+            background: gold;
+            cursor: pointer;
+        }
+        #box ul li:nth-child(3){
+            border-right: none;
+        }
+        #box ul li{
+            list-style: none;
+            float: left;
+            font-size: 20px;
+            line-height: 100px;
+            margin-left: 25px;
+            border-right: 1px solid black;
+            padding-right: 15px;
+
+        }
+        #box div{
+            font-size: 20px;
+            width: 300px;
+            height: 500px;
+
+            background: green;
+            display: none;
+
+            text-align: center;
+            line-height: 500px;
+
+
+        }
+
+        #box div.active{
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <ul>
+        <li class="active">湖人</li>
+        <li>凯尔特人</li>
+        <li>火箭</li>
+    </ul>
+    <div class="active">詹姆斯</div>
+    <div>欧文</div>
+    <div>哈登</div>
+</div>
+
+
+
+
+</body>
+</html>
+<script>
+    var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+    var contents = box.getElementsByTagName('div');
+    for(var i = 0;i<lis.length;i++){
+        lis[i].index = i;
+        lis[i].onclick = function () {
+            for (var j=0;j<lis.length;j++){
+                lis[j].className = '';
+                contents[j].className = '';
+            }
+            this.className = 'active';
+            contents[this.index].className = 'active';
+
+        }
+    }
+
+
+
+
+
+
+
+
+</script>

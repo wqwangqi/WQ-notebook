@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background: purple;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    let minL = 0,minT = 0,maxL = document.clientWidth,maxT = document.clientHeight;
+    box.onmousedown = function (e) {
+        this.l = e.clientX-this.offsetLeft;
+        this.t = e.clientY-this.offsetTop;
+        var that = this;
+        document.onmousemove = function (e) {
+            var l =  e.clientX-that.l;
+            var t = e.clientY-that.t;
+            box.style.left =l+'px';
+            box.style.top = t+'px';
+            l<minL?minL:l<maxL?maxL:l;
+            t<minT?minT:t>maxT?maxT:t;
+        }
+    };
+    this.onmouseup = function () {
+        document.onmousemove = null;
+    }
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function type(value) {
+        var a=Object.prototype.toString.call(value);
+        var b = a.indexOf(' ');   //字符找索引
+        console.log(a.slice(b+1,a.length-1));
+
+    }
+
+    type('');
+    type(6);
+    type(function () {});
+    type([]);
+    type({});
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+
+<style>
+    input{
+        color: grey;
+    }
+    input::placeholder{
+        color: red;
+        font-size: 15px;
+        transform-origin: left center;
+        transition: all .6s;
+
+
+    }
+    input:focus::placeholder{
+        transform: scale(.5);
+    }
+
+</style>
+
+<input type="text" placeholder="手机号或用户名">
+
+
+
+</body>
+</html>

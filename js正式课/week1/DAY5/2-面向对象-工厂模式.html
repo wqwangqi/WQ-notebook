@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //函数的作用：把实现相同功能的代码封装在一起，当需要实现这个功能时，只需要执行下函数即可
+    //工厂模式：解决‘批量生产’的问题      操作的是一个函数
+    function shirt() {
+        //制作衣服的流程
+        //1.创建一个对象
+        var obj = {};
+        //2.给对象添加属性和方法
+        obj.size = 'XXL';
+        obj.material = '棉';
+        obj.color = 'white';
+        //3.返回对象
+        return obj;
+
+    }
+    for (var i =0;i<1000;i++){
+        shirt();
+    }
+    //工厂模式方式，批量获取div
+    document.querySelectorAll('div');
+</script>

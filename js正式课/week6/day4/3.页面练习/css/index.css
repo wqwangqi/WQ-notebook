@@ -1,0 +1,36 @@
+.header .nav {
+  position: fixed;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  z-index: 0;
+  height: 83px;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+.header .nav .top {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header .nav .top h1 {
+  width: 325px;
+  height: 33px;
+  background: url("../img/logo1.png") no-repeat;
+  float: left;
+  margin-top: 25px;
+}
+.header .nav .top ul {
+  float: right;
+}
+.header .nav .top ul li {
+  float: left;
+  font-size: 16px;
+  color: white;
+  padding: 0 25px;
+  line-height: 83px;
+}
+.header .slide {
+  height: 638px;
+  width: 100%;
+  background: url("../img/banner1.jpg") no-repeat center top;
+}

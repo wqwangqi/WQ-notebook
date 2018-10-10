@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    function fn() {
+        console.log(arguments);
+        var de = 0;
+        for (var i = 0;i<arguments.length;i++){
+            if (!isNaN(arguments[i])){
+                de += Number(arguments[i])
+            }
+        }
+
+        return de
+
+
+    }
+    console.log(fn(1, 2, 3, '5', 'a', 'c', NaN, '9'));
+
+
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #box{
+            width: 70%;
+            height: 50px;
+            color: yellow;
+            font-size: 22px;
+            margin: 250px auto;
+            background: linear-gradient(#666,lightblue);
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            letter-spacing: 5px;
+
+            
+        }
+    </style>
+    
+</head>
+<body>
+<div id="box">距离下次考试还有：0天0时0分0秒</div>
+</body>
+</html>
+
+<script>
+    //获取现在的时间
+    //var date = new Date().getTime();
+    //Date.now()
+
+    //获取终点的时间
+    //var target = new Date('2018-08-12 18:00:00')
+
+var box = document.getElementById('box');
+    function lastTime(time) {
+        //现在的时间
+        var date = new Date().getTime();
+        //计算时间差  =>  终点的时间-现在的时间
+        var targetTime = new Date(time)-date;
+        //targetTime =>
+        //日期
+        var day = Math.floor(targetTime/(1000*60*60*24));
+        //小时
+        var hour = Math.floor(targetTime%(1000*60*60*24)/(1000*60*60));
+        //分钟
+        var minute = Math.floor(targetTime%(1000*60*60*24)%(1000*60*60)/(1000*60));
+        //秒
+        var second = Math.floor(targetTime%(1000*60*60*24)%(1000*60*60)%(1000*60)/1000);
+
+        box.innerHTML = `距离毕业还有：${day}天${hour}时${minute}分${second}秒`;
+
+        console.log(day);
+
+
+
+
+    }
+    setInterval(function () {
+        lastTime('2018-10-01 20:30:00')
+    },1000);
+
+
+
+</script>

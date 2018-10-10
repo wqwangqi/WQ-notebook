@@ -1,0 +1,118 @@
+1.
+    var ary=[10,30,50];
+    function fn(n){
+        n.push(40);
+        alert(n);
+        n=[];
+        n[n.length]=100;
+        console.log(n)
+    }
+    fn(ary)
+    alert(ary);
+
+2.
+    var n=13;
+    function fn(n){
+        alert(n);
+        n=14;
+        alert(n);
+    }
+    fn(n);
+    alert(n)
+
+3.
+    var n=0;
+    function a(){
+        var n=10;
+        function b(){
+            n++;
+            alert(n);
+        }
+        b();
+        return b;
+    }
+    var c=a();
+    c();
+    alert(n);
+
+4.
+    console.log(num,str);
+    var num = 18;
+    var str = "lily";
+    function fn2(){
+        console.log(str,num);
+        num = 19;
+        str = "candy";
+        var num = 14;
+        console.log(str,num);
+    }
+    fn2();
+    console.log(str,num);
+
+5.
+    fn();
+    function fn(){console.log(1)};
+    fn();
+    var fn = 13;
+    fn();
+    function fn(){console.log(2)};
+    fn();
+
+6.
+    function fn(){
+        var i=5;
+        return function(n){
+            console.log(n*i++);
+        }
+    }
+    var f=fn();
+    f(4);
+    fn()(5);
+    f(6);
+
+7.
+     var i=3;
+     function fn(){
+         i*=2;
+         return function(n){
+             console.log(n*(++i))
+         }
+     }
+     var f=fn();
+     f(3)
+     fn()(3);
+     f(4);
+     fn()(3);
+
+ 9.
+
+     var name='珠峰';
+     var age=300;
+     name=(function(name,age){
+         arguments[0]='珠峰培训';
+         age=age && this.age;
+         console.log(name,age);
+     })(name);
+     console.log(name,age)
+
+ 10.
+    var num = 3;
+    var obj = {
+        num:5,
+        fn : (function(){
+            this.num*=2;
+            var num = 4;
+            return function(){
+                this.num *=2;
+                num *= 4;
+                alert(num);
+            }
+        })()
+    }
+    var fn = obj.fn;
+    alert(num);
+    fn();
+    obj.fn();
+    console.log(window.num,obj.num);
+
+

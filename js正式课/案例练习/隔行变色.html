@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 300px;
+            height: 500px;
+            background: yellow;
+            border: 1px dashed purple;
+            border-radius: 10px;
+            margin: 200px auto;
+            cursor: pointer;
+        }
+        ul li {
+            list-style: none;
+            width: 300px;
+            height: 50px;
+            border-bottom: 1px solid gray;
+            box-sizing: border-box;
+            font-size: 20px;
+            color: rgba(0,0,0,.5);
+            text-align: center;
+            line-height: 50px;
+        }
+        ul li:nth-child(10){
+            border: none;
+        }
+        .bg1{
+            background: yellow;
+        }
+        .bg2{
+            background: rebeccapurple;
+        }
+        .bg3{
+            background: rgba(0,0,0,.5);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>詹姆斯</li>
+        <li>安东尼</li>
+        <li>保罗</li>
+        <li>韦德</li>
+        <li>哈登</li>
+        <li>库里</li>
+        <li>诺维茨基</li>
+        <li>小杜</li>
+        <li>欧文</li>
+        <li>师弟</li>
+    </ul>
+</body>
+</html>
+
+<script>
+    var lis = document.getElementsByTagName('li');
+    for (let i = 0; i <lis.length ; i++) {
+        if (i%2==0){
+            lis[i].className = 'bg1';
+            lis[i].a = 'bg1'
+        } else {
+            lis[i].className = 'bg2';
+            lis[i].a = 'bg2'
+        }
+        lis[i].onmouseover = function () {
+            lis[i].className = 'bg3'
+        };
+        lis[i].onmouseout = function () {
+             lis[i].className = lis[i].a;
+        }
+    }
+
+
+
+</script>

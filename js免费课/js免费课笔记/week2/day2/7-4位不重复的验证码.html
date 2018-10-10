@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <div id="box"></div>
+</body>
+</html>
+<script>
+
+    var str = 'abcdefghijklmnopqrstuvwxyz'+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"+'1234567890';
+    var box = document.getElementById('box');
+
+    for (var i=0;i<4;i++){
+        var index = Math.round(Math.random()*(str.length-1));
+        str[index]==undefined?console.log(index):void 0;
+        if (box.innerHTML.indexOf(str[index])==-1){  //重复
+            box.innerHTML += str[index];
+        }else {
+            i--
+        }
+}
+
+
+</script>

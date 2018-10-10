@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<style>
+    @keyframes my{
+        0%{background: red; width: 50px; transform: translate(0) }
+        25%{background: black; width: 100px; transform: translate(50) }
+        50%{background: blue;  width: 150px; transform: translate(100)}
+        75%{background: green; width: 200px; transform: translate(150) }
+        100%{background: pink; width: 250px; transform: translate(200) }
+    }
+    -webkit-@keyframes my{
+        0%{background: red; width: 50px; transform: translate(0) }
+        25%{background: black; width: 100px; transform: translate(50) }
+        50%{background: blue;  width: 150px; transform: translate(100)}
+        75%{background: green;  width: 200px; transform: translate(150)}
+        100%{background: pink; width: 250px; transform: translate(200)}
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+   .div1{
+       background-color: red;
+       width: 300px;
+       height: 300px;
+
+       /*transform: skewx(30deg) translatex(200px)  scale(.5 .5) ;*/
+       /*-webkit-transition-property: all;
+      -webkit-transition-duration: 4s;*/
+       /*margin: 0 auto;
+       font-size: 12px;
+       color:red;
+       text-align: center;
+       line-height: 100px;*/
+       animation: my 1s ease 1s infinite;
+       margin: 0 auto;
+
+
+
+
+
+
+   }
+   /* .div1:hover{
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        border: 3px solid blue;
+        font-size: 20px;
+        text-align: center;
+        line-height: 300px;
+        color: black;
+        !*transform: rotate(95deg);*!
+
+    }*/
+</style>
+
+
+
+
+
+
+<div class="div1"></div>
+
+
+</body>
+</html>

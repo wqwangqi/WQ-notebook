@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #div1{
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>
+<script>
+    //基本数据类型(值类型)：Number,String,Boolean,Null和Undefined
+    //引用类型：对象类型（object,array,regExp,Math,Date）和函数类型(function)
+    //var person = {xm:"xxx",age:18,gender:"男",hobby:"睡觉"}
+
+    //深入理解对象类型的数据
+    //根据需求
+    //第一种
+    /*var oDiv  = document.getElementById("div1");
+    oDiv.style.width = "100px";
+    console.dir(oDiv);*/
+
+    //第二种
+    /*var oStyle = document.getElementById("div1").style;
+    oStyle.width = "100px";*/
+
+    //第三种
+    var oWidth  = document.getElementById("div1").style.width;
+    oWidth = "100px";
+
+</script>

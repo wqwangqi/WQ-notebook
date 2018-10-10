@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 回调函数：把一个函数b当做参数传给另外一个函数a，当a这个函数执行的时候，也同时让函数b执行，这种机制叫做回调函数机制
+    *
+    * 回调函数【callback】的特点：
+    * 1.回调函数可以根据情况执行多次
+    * 2.回调函数中的this可以修改
+    * 3.可以给回调函数传参，只需要给回调函数设置形参即可
+    * 4.可以在宿主函数【a】当中接收回调函数的返回值
+    * */
+    function a(fn) {
+        console.log(2);
+        fn()
+    }
+    function b() {
+        console.log(1);
+    }
+    a(b)
+    //2  1
+
+</script>

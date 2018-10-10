@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+.box{
+    width: 700px;
+    height: 300px;
+   background-color:darkgrey;
+}
+.box h3{
+    width: 700px;
+    height: 40px;
+    line-height: 40px;
+    background-color: chocolate;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+.box h4 span{
+    color: aqua;
+    font-size: 14px;
+line-height: 30px;
+
+}
+.box h4 a{
+    color: blueviolet;
+    font-size: 13px;
+    line-height: 30px;
+}
+.box h5{
+    color: red;
+    font-size: 14px;
+line-height: 20px;
+}
+.box p{
+    color: grey;
+    font-size: 13px;
+    line-height: 30px;
+}
+.box p span{
+    color: chocolate;
+    line-height: 30px;
+}

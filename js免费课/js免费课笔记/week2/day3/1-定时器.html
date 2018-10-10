@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+
+    /*
+    * 定时器
+    * 定义：时间到了以后执行某一个方法
+    * 使用方法：参数1是执行的方法，参数2是时间 [ms]
+    * setTimeout  :时间到了只执行一次这个方法
+    * setInterval  :时间到了执行这个方法，不断进行循环往复
+    * clearInterval :清除定时器
+    * clearTimeout :清除定时器
+    *返回值: 表示你设置的第几个定时器
+    * 注意：定时器都是异步执行
+    *
+    * */
+    //执行一次
+    var num1 = setTimeout(function () {
+        //alert('一秒以后执行')
+        console.log(1);
+    },1000);
+    //循环执行
+    var n = 1;
+    var num2 = setInterval(function () {
+        n++;
+        console.log(n);
+        if (n>5){
+            //clearInterval(num2)
+            clearTimeout(num2)
+            num2 = null;    //通过num2值来判断定时器是开启的还是清除的
+        }
+    },1000);
+    //console.log(num1);
+    //console.log(num2);
+
+
+</script>

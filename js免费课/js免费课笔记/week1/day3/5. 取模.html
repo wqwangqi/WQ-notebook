@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // %
+    /*
+    * 取模:看除法中的余数,
+    * 如果除不尽的话,那么余数就是被除数;
+    * 如果可以除尽,那么余数就是0;
+    * 除尽,余数是0,除不尽,余数是除剩下的值.
+    *
+    * */
+    // 5%2=> 1
+    // 1%2 => 1
+    //  2%2 => 0
+    //  3%1 => 0
+    //console.log(5 % 2);
+
+    //作业：
+    //100内能被3整除的数相加
+    //fn(100)
+    function fn() {
+        var a = 0;
+        for(var i=0;i<100;i++){
+            if (i%3,i%5==0){
+                a+=i;
+            }
+        }
+        return a
+    }
+    console.log(fn());
+
+
+    //100以内能被2整除的相加
+   function f() {
+       var d = 0;
+       for(var i =0;i<100;i++){
+           if (i%2 == 0){
+               d += i;
+           }
+       }
+return d
+   }
+    console.log(f());
+
+</script>

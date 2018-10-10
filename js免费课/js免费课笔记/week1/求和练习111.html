@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+    function fn() {
+        console.log(arguments);
+        var aa = 0;
+        for(var i =0;i<arguments.length;i++){
+            if (!isNaN(arguments[i])){
+                aa += Number(arguments[i])
+            }
+        }
+
+return aa
+    }
+    console.log(fn(1, 2, 3, 9, 'a', NaN, '7'));
+</script>
+<script>
+    function f() {
+        console.log(arguments);
+        var ee = 0;
+        for (var i=0;i<arguments.length;i++){
+            if (!isNaN(arguments[i])){
+                ee += Number(arguments[i])
+            }
+        }
+return ee
+    }
+    console.log(f(1, 2.3, '96', 'a', null, NaN));
+
+
+</script>

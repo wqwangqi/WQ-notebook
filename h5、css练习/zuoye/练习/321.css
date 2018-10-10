@@ -1,0 +1,43 @@
+li{list-style: none }
+.box{
+    height: 200px;
+    background-color: #2a2a2a;
+}
+ .box .footer{
+    margin: 0 auto;
+    width: 1200px;
+     height: 180px}
+.box .footer .a{
+    float: left;
+    margin-top: 30px;
+
+}
+.box .footer .a dl{
+    float: left;
+    margin-right: 100px;
+    margin-top: 10px;
+
+
+}
+.box .footer .a a{
+    color: grey;
+
+}
+.box .footer .a dl dt:hover a{
+    color: yellow;
+
+}
+.box .footer .a dt a{
+    line-height: 40px;
+
+}
+.box .footer .b{
+    float: right;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+.box .footer .b .hh li{
+    float: right;
+    margin-right: 10px;
+}
+

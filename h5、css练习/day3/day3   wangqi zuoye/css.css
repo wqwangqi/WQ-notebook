@@ -1,0 +1,92 @@
+
+a{
+    text-decoration: none;
+}
+li:hover{
+   background-color: green;
+}
+
+
+.box{
+    width: 700px;
+    height: 450px;
+    background-color: darkgrey;
+    margin:0 auto;
+}
+.box h3{
+    width: 700px;
+    height: 40px;
+    line-height: 40px;
+    background-color:yellow ;
+    text-align: center;
+    color:white;
+    font-size: 30px;
+
+}
+.box h4{
+    color: cadetblue;
+    font-size: 14px;
+    line-height: 20px;
+}
+.box p{
+
+    color: grey;
+    font-size: 14px;
+    line-height: 20px;
+}
+.box,ul,span{
+    color:black;
+    font-size: 15px;
+    line-height: 20px;
+}
+.box ul li a{
+    color: chocolate;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.bbb h3 a:hover{
+    background-color: grey;
+}
+.bbb{
+
+    width: 700px;
+    height: 400px;
+    background-color: grey;
+    margin: 0 auto;
+}
+.bbb h3{
+    font-size: 30px;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+
+}
+.bbb h3 a span{
+    color: yellow;
+    font-size: 15px;
+    float: right;
+
+}
+.bbb ol span{
+    color: black;
+    font-size: 14px;
+    line-height: 20px;
+}
+.bbb ol a{
+    color: chocolate;
+    font-size: 14px;
+    line-height: 20px;
+}
+

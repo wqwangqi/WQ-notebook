@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #div1{
+            width: 500px;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+            font-size: 30px;
+            color: palegreen;
+            text-shadow: 2px 2px 1px #000;
+            text-align: center;
+            background: -webkit-linear-gradient(left,paleturquoise,papayawhip,palevioletred);
+            background: linear-gradient(left,paleturquoise,papayawhip,palevioletred);
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>
+<script>
+    //获取电脑的本地日期和时间
+    var oDiv = document.getElementById("div1");
+    function  getComputedTime(){
+        var time = new Date();//以现在的时间为基准创建时间对象
+        var year  = time.getFullYear();
+        var month = time.getMonth()+1;
+        var date = time.getDate();
+        var hour = time.getHours();//时
+        var minute = time.getMinutes();//分
+        var second = time.getSeconds();//秒
+        var str = year+"年"+month+"月"+date+"日"+hour+"时"+minute+"分"+second+"秒";
+        oDiv.innerHTML = str;
+    }
+    getComputedTime();
+    var timer = window.setInterval(getComputedTime,1000);
+
+    oDiv.onclick = function(){//点击div时执行
+        //点击时，若定时器是开启则设成停止，若是停止则设成开启
+        console.log(timer);
+        if(timer){//条件成立表示现在定时器处于开启状态需要清除
+            window.clearInterval(timer);
+            timer = null;
+        }else{//现在定时器是清除了，需要重新开启定时器
+          timer = window.setInterval(getComputedTime,1000);
+        }
+        console.log(timer);
+    }
+</script>

@@ -1,0 +1,673 @@
+li{
+    list-style: none;
+}
+.footer{
+    height: 84px;
+    background-color: white;
+
+}
+.footer .main{
+    width: 1204px;
+    height: 84px;
+    margin: 0 auto;
+}
+.footer .main .ll{
+    float: left;
+}
+.footer .main .ll img{
+    width: 176px;
+    height: 52px;
+    margin-top: 16px;
+}
+.footer .main .cen{
+    float: left;
+    margin-left: 52px;
+}
+.footer .main .cen li{
+    float: left;
+    margin-right: 60px;
+    line-height: 84px;
+}
+.footer .main .cen li a{
+    color: #2a2a2a;
+    font-size: 14px;
+}
+.footer .main .cen li:hover a{
+    color: #2b7dd1;
+}
+.footer .main .gg{
+    float: right;
+position: relative;
+    line-height: 84px;
+
+}
+.footer .main .gg span i{
+    background: url("../img/10.png") no-repeat;
+    width: 24px;
+    height: 22px;
+    vertical-align: middle;
+
+    display: inline-block;
+    margin-right: 8px;
+
+
+}
+.footer .main .gg span:hover i{
+    background: url("../img/2.png");
+}
+.footer .main .gg span:hover{
+    color: #2b7dd1;
+}
+.footer .main .gg a{
+    font-size: 14px;
+    margin-left: 40px;
+    color: #666767;
+
+}
+.footer .main .gg .box{
+    /*display: none;*/
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+    /*height: 411px;*/
+    border: 1px solid ;
+    margin-top: 63px;
+    margin-left: -150px;
+    padding: 13px;
+    z-index: 1;
+    background-color: white;
+}
+.footer .main .gg:hover .box{
+    display: block;
+}
+.footer .main .gg .box .ff{
+    float: left;
+    width: 350px;
+    border-bottom: 1px solid #7d7d7d;
+    height: 54px;
+
+
+}
+.footer .main .gg .box .ff h3{
+    float: left;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-top: -20px;
+
+}
+.footer .main .gg .box .ff span{
+    float: right;
+    font-size: 12px;
+    color: black;
+    margin-top: -20px;
+}
+.footer .main .gg .box .cont{
+    width: 350px;
+    float: left;
+    height: 290px;
+}
+.footer .main .gg .box .cont .jki{
+    background: url("../img/sss12.png") no-repeat 14px 18px;
+    background-color: #9e9e9e;
+    margin:59px auto 2px;
+    width:68px;
+    height: 68px;
+    border-radius: 50%;
+
+
+
+}
+.footer .main .gg .box .cont .lkj{
+    font-size: 14px;
+    color: #414141;
+    text-align: center;
+    border-bottom: 1px solid #414141;
+    width: 190px;
+    text-align: center;
+    margin-left: 80px;
+
+}
+.footer .main .gg .box .cont p a{
+    font-size: 12px;
+    color: #4e91d7;
+    margin-top: 25px;
+
+
+    margin-left: 100px;
+}
+.footer .main .gg .box .bot{
+    float: left;
+    width: 350px;
+    border-top: 1px solid #414141;
+
+}
+.footer .main .gg .box .bot a{
+
+    background-color: #4e91d7;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    margin-left: 170px;
+    border-radius: 3px;
+    padding: 10px 10px 10px;
+}
+
+
+
+li{
+    list-style: none;
+    cursor: pointer;
+
+}
+.moo{
+    height: 360px;
+
+}
+.moo .main{
+    width: 1205px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+.moo .main .png{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.moo .main .png .b{
+    display: none;
+}
+.moo .main .png .c{
+    display: none;
+}
+.moo .main .png .d{
+    display: none;
+}
+.moo .main .kj li{
+    width: 240px;
+    height: 72px;
+
+    background-color: rgba(2,0,0,.2);
+
+
+
+
+}
+.moo .main .kj li:hover{
+    background-color: rgba(26,84,119,.8);
+}
+.moo .main .kj li a{
+    font-size: 14px;
+    color: white;
+    height: 72px;
+    line-height: 72px;
+    margin-left: 35px;
+    border-bottom: 1px solid rgba(255,255,255,.44);
+    display: block;
+    width: 190px;
+}
+.moo .main .kj li a span{
+   margin-left: 30px;
+
+
+}
+.moo .main .kj{
+    position: relative;
+    width: 240px;
+
+
+
+
+
+
+}
+.moo .main .kj .kjz{
+    display: none;
+
+    position: absolute;
+    left: 240px;
+    top: 0px;
+
+
+}
+.moo .main .kj:hover .kjz{
+    display: block;
+}
+.moo .main .kj .kjz dl{
+    display: inline-block;
+    width: 574px;
+    height: 360px;
+    background: url("../img/6541.png") no-repeat;
+    padding-left: 23px;
+    padding-top: 20px;
+
+}
+.moo .main .kj .kjz .ub{
+    position: absolute;
+    left: 0;
+    top: -72px;
+    background: url("../img/6547.png") no-repeat;
+
+}
+.moo .main .kj .kjz .yv{
+    position: absolute;
+    left: 0;
+    top: -144px;
+
+}
+.moo .main .kj .kjz .rx{
+    position: absolute;
+    left: 0;
+    top: -216px;
+    background: url("../img/6547.png") no-repeat;
+
+}
+.moo .main .kj .kjz .wa{
+    position: absolute;
+    left: 0;
+    top: -288px;
+
+}
+.moo .main .kj .kjz dl dt{
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    color: #0b0b0b;
+}
+.moo .main .kj .kjz dl dd{
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    color: #4a4b4b;
+}
+
+
+
+
+
+.main{
+    width: 1204px;
+    margin: 0 auto;
+}
+.actual{
+    margin-top:39px;
+}
+.actual h3{
+    padding-bottom: 20px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #2d2d2d;
+}
+.actual li{
+    position: relative;
+    float: left;
+    width:251px;
+    height: 184px;
+    margin-right:66px;
+    box-shadow: 1px 1px 3px rgba(2,2,2,.27);
+}
+.actual li.noMargin{
+    margin-right: 0;
+}
+.actual li img{
+    width:100%;
+}
+.actual li .top{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width:221px;
+    padding:15px;
+    background-color: #fff;
+    transition: all 0.3s;
+
+    cursor: pointer;
+}
+.actual li .top h4{
+    font-size: 14px;
+    color: #1e1e1e;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+.actual li .top p{
+    font-size: 12px;
+    line-height: 14px;
+    color: #9e9d9d;
+}
+.actual li .top:hover{
+    bottom: 43px;
+}
+.actual li .bot{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width:221px;
+    padding:0 15px;
+    background-color: #fff;
+    line-height: 43px;
+}
+.actual li .bot .money{
+    float: left;
+    font-size: 12px;
+    color: #c71b1b;
+}
+
+.actual li .bot .study{
+    float: right;
+    font-size: 12px;
+    color: #868484;
+}
+
+.content .webInfo{
+    float: left;
+    width:251px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.shop{
+    height: 466px;
+    background-color: whitesmoke;
+    margin-top: 30px;
+
+}
+.shop .main{
+    position: relative;
+}
+.shop .main .web{
+    position: relative;
+    padding-top: 35px;
+    padding-left: 14px;
+
+}
+.shop .main .web .photo{
+    background: url("../img/weibu1.png") no-repeat;
+    width: 224px;
+    height: 380px;
+    display: block;
+
+
+}
+.shop .main .web .q{
+    position: absolute;
+    left: 31px;
+    top: 60px;
+}
+.shop .main .web .q h3{
+    font-size: 30px;
+    color: white;
+
+
+}
+.shop .main .web .q span{
+    font-size: 14px;
+    color: white;
+    line-height: 26px;
+
+
+}
+.shop .main .web .q p{
+    font-size: 12px;
+    color: #01639b;
+    line-height: 30px;
+    cursor: pointer;
+}
+.shop .main .web .q .lin{
+    margin-top: 126px;
+}
+
+
+.shop .main .center5{
+
+}
+.shop .main .center5 .icon4 i{
+    background: url("../img/weibu2.png") no-repeat;
+    width: 397px;
+    height: 184px;
+    display: block;
+    position: absolute;
+    left: 252px;
+    top: 35px;
+}
+.shop .main .center5 .icon4 .note{
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    left: 260px;
+    top: 110px;
+}
+.shop .main .center5 .icon5 i{
+    background: url("../img/weibu3.png") no-repeat;
+    width: 397px;
+    height: 185px;
+    display: block;
+    position: absolute;
+    left: 252px;
+    top: 230px;
+}
+.shop .main .center5 .icon5 .note1{
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    left: 260px;
+    top: 300px;
+}
+
+
+
+
+
+.shop .main .center6{
+    position: absolute;
+    left: 667px;
+    top: 35px;
+}
+.shop .main .center6 li{
+    position: relative;
+    width: 250px;
+    height: 185px;
+}
+.shop .main .center6 li img{
+    width: 250px;
+}
+.shop .main .center6 li .center1{
+    background: url("../img/writebg.png") no-repeat;
+    width: 250px;
+    height: 107px;
+
+
+    position: absolute;
+    left: 0;
+    top: 73px;
+    transition: all .3s;
+
+
+
+
+}
+.shop .main .center6 li .center1:hover{
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+.shop .main .center6 li .center1 h4{
+    font-size: 14px;
+    color: #1e1e1e;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+.shop .main .center6 li .center1 p{
+    font-size: 12px;
+    color: #9e9d9d;
+
+    padding: 0 15px 0 15px;
+
+
+    width: 180px;
+
+}
+.shop .main .center6 li .font1{
+    background-color: white;
+    width: 250px;
+    height: 49px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+
+
+
+
+
+}
+.shop .main .center6 li .font1 .money{
+    float: left;
+    font-size: 12px;
+    color: #c71b1b;
+    padding-left: 10px;
+    padding-top: 20px;
+
+}
+.shop .main .center6 li .font1 .study{
+    float: right;
+    font-size: 12px;
+    color: #868484;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+.shop .main .center6 .flay{
+    margin-top: 12px;
+
+}
+
+
+
+.shop .main .font6{
+float: right;
+    margin-top: -380px;
+    position: relative;
+    width: 250px;
+    height: 185px;
+}
+.shop .main .font6 i{
+    background: url("../img/weibu5.png") no-repeat;
+    width: 250px;
+    height: 145px;
+    display: block;
+}
+.shop .main .font6 .hot .heat{
+    background: url("../img/writebg.png") no-repeat;
+    width: 214px;
+    height: 107px;
+    position: absolute;
+    left: 0;
+    top: 72px;
+    padding: 15px 18px 0 18px;
+    transition: all 0.3s;
+
+
+}
+.shop .main .font6 .hot .heat:hover{
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+.shop .main .font6 .hot .heat .gray{
+    background-color: grey;
+    padding: 0 2px 0 2px;
+}
+.shop .main .font6 .hot .heat h3{
+font-size: 16px;
+    color: #1e1e1e;
+    line-height: 24px;
+    float: right;
+
+}
+.shop .main .font6 .hot .heat p{
+    font-size: 12px;
+    color: #9e9d9d;
+    line-height: 20px;
+}
+.shop .main .font6 .hot .online{
+    background-color: white;
+    width: 240px;
+    height: 45px;
+    display: inline-block;
+    font-size: 14px;
+    color: #9e9e9e;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 10px;
+
+}
+
+
+
+
+
+
+.foot-1{
+    background-color: #2e2e2e;
+    height: 270px;
+}
+.foot-1 .main{
+    width: 1204px;
+}
+.foot-1 .main .wz-1 dl{
+    float: left;
+    margin-right: 65px;
+    margin-top: 48px;
+}
+.foot-1 .main .wz-1 .noMargin{
+    margin-right: 0;
+}
+.foot-1 .main .wz-1 dl dt{
+    font-size: 16px;
+    color: #fefdfd;
+    line-height: 30px;
+}
+.foot-1 .main .wz-1 dl dd{
+    font-size: 14px;
+    color: #a3a3a3;
+    line-height: 30px;
+}
+
+
+.foot-1 .main .icon-zf i{
+    background: url("../img/icon-127.png") no-repeat;
+    /*background-position: ;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

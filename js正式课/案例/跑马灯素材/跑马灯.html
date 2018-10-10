@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #box{
+            width: 600px;
+            height: 200px;
+            border: 3px solid purple;
+            border-radius: 20px;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+        #content{
+            width: 2400px;
+            height: 200px;
+            font-size:0;
+
+        }
+        #begin,#end{
+            display: inline-block;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border: 0;
+            filter: sepia(200%);
+        }
+        img:hover{
+            filter: blur();
+            transform: translateY(-3px);
+            transition: all 1s;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="content">
+        <div id="begin">
+            <img src="1.png" alt="">
+            <img src="2.png" alt="">
+            <img src="3.png" alt="">
+            <img src="4.png" alt="">
+            <img src="5.png" alt="">
+            <img src="6.png" alt="">
+        </div>
+        <div id="end">
+            <img src="1.png" alt="">
+            <img src="2.png" alt="">
+            <img src="3.png" alt="">
+            <img src="4.png" alt="">
+            <img src="5.png" alt="">
+            <img src="6.png" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    let box = document.getElementById('box');
+    let begin = document.getElementById('begin');
+    let W = begin.offsetWidth;
+    function fn() {
+        box.scrollLeft+=3;
+        if (box.scrollLeft>=W){
+            box.scrollLeft=0
+        }else {
+            box.scrollLeft+=3;
+        }
+    }
+    //在动画里面13-17毫秒是比较流畅的一个速度值
+    let timer = setInterval(fn.bind(box),17);
+
+    //鼠标划入停止，滑出继续
+    box.onmouseover = function () {
+        clearInterval(timer);
+    }
+    box.onmouseout = function () {
+        timer = setInterval(fn.bind(box),17);
+    }
+</script>

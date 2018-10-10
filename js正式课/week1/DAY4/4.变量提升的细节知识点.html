@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //fn();报错
+    //f();报错
+    /*console.log(f);//undefined
+    var f = function fn(){  //函数表达式
+        console.log(1);
+    };
+    f();//1*/
+
+
+    //函数作为返回值
+    /*function fn(){
+        console.log(sum);
+        console.log(num);//undefined
+        return function sum(){
+            console.log(1);
+        }
+        var num = 10;
+        function sum(){
+            console.log(1);
+        }
+    }
+    fn();*/
+
+    //重名变量 不会重复声明，但会重复定义
+   /* console.log(a);
+    var a = 10;
+    function a(){
+        console.log(1);
+    }
+    a();*///a is not a function
+
+    //练习
+    /*fn();
+    function fn(){console.log(1)};
+    fn();
+    var fn = 13;
+    fn();
+    function fn(){console.log(2)};
+    fn();*/
+
+    //条件判断变量提升的规则
+    /*if(!("a" in window)){//在代码执行之前已有变量a,所以 "a" in window返回true
+        var a = 13;
+    }
+    console.log(a);*///undefined
+
+    /*console.log(fn);//标准浏览器->undefined  IE浏览器 ->fn函数本身
+    fn();//标准浏览器->报错  IE浏览器->1
+    if(9==8){
+        function fn(){
+            console.log(1);
+        }
+    }*/
+
+    //自执行函数 定义+执行一起做了  (闭包)
+    //f();
+   /* ;(function f(){
+        fn();
+        function fn(){
+            console.log(1)
+        }
+    })()*/
+
+    //es5 {}不表示块级作用域
+    ~(function(){
+        for(var i = 0;i<10;i++){
+
+        }
+    })()
+
+    console.log(i);
+
+
+
+
+
+</script>

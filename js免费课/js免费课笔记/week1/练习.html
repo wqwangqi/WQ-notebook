@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="box" onclick="alert()"></div>
+<script>
+
+
+  /*  console.log(1+1);
+    var a=6
+    console.log(a+18);
+    console.log(Number('true'));
+    console.log(parseFloat('1.21232123'));
+    console.log((5).toFixed(2));*/
+
+  console.log(isNaN(null));//  Number(null)==>0=>false
+  console.log(parseInt(null));//NaN
+  console.log(Number(null));//0
+  console.log(parseInt(""));//NaN
+  console.log(Number(""));//0
+  console.log(isNaN(NaN));//true
+  console.log(parseInt(NaN));//NaN
+  console.log(Number(NaN));//NaN
+  console.log(isNaN(parseInt("")));//true
+  console.log(isNaN(Number("1px")));//true
+  console.log(parseInt("1px"));//1
+  console.log(isNaN(parseInt("1px")));//false
+  console.log(isNaN(parseInt(undefined)));//true
+  console.log(isNaN(Number(undefined)));//true
+  console.log(isNaN("1 1"));//true
+  console.log(parseInt("1.2px"));//1
+  console.log(parseFloat("1.2px"));//1.2
+  console.log(typeof isNaN("1px"));//boolean
+  console.log(typeof parseInt(null));//number
+  console.log(parseInt([]));//[]NaN
+  console.log(Number([]));//=>Number('') =>0
+  console.log(isNaN(parseInt(typeof NaN)));//true
+
+
+
+
+</script>
+</body>
+</html>
